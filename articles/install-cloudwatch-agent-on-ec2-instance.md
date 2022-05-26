@@ -194,7 +194,7 @@ sudo amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amaz
 ```
 
 |オプション|説明|
-|---|---|---|
+|---|---|
 |-a(action) `fetch-config`|apply config for agent, followed by -c or -o or both. Target config can be based on location (ssm parameter store name, file name), or 'default'.|
 |-m(mode) `ec2`|indicate this is on ec2 host.|
 |-s|optionally restart after configuring the agent configuration this parameter is used for 'fetch-config', 'append-config', 'remove-config' action only.|

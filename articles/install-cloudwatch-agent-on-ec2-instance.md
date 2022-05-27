@@ -56,7 +56,7 @@ AWSが提供するサンプルをもとに必要に応じて内容を変更す�
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Complete-Example
 
-```
+```json:amazon-cloudwatch-agent.json
 {
   "agent": {
     "metrics_collection_interval": 10,
@@ -65,7 +65,7 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
   },
   "metrics": {
     "namespace": "MyCustomNamespace",
-    "metrics_collected": {
+    "metrics_collected": { # CloudWatch Metricsに送信するメトリクスのリスト
       "cpu": {
         "resources": [
           "*"
@@ -172,7 +172,7 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
   "logs": {
     "logs_collected": {
       "files": {
-        "collect_list": [ # CloudWatch Logsに送信したいログファイルのリスト
+        "collect_list": [ # CloudWatch Logsに送信するログファイルのリスト
           {
             "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
             "log_group_name": "amazon-cloudwatch-agent.log",

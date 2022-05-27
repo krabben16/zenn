@@ -54,7 +54,8 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
 {
   "agent": {
     "metrics_collection_interval": 10,
-    "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log" # エージェントのログファイル出力先
+    # エージェントのログファイル出力先
+    "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
   },
   "metrics": {
     "namespace": "MyCustomNamespace",
@@ -64,8 +65,11 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
           "*"
         ],
         "measurement": [
+          # CPU がアイドル状態の時間の割合。
           {"name": "cpu_usage_idle", "rename": "CPU_USAGE_IDLE", "unit": "Percent"},
+          # プロセスの優先度が低く、優先度の高いプロセスによって簡単に中断される場合がある、ユーザーモードになっている CPU の時間の割合。
           {"name": "cpu_usage_nice", "unit": "Percent"},
+          # ゲストオペレーティングシステムで CPU が仮想 CPU を実行している時間の割合。
           "cpu_usage_guest"
         ],
         "totalcpu": false,
@@ -81,9 +85,10 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
           "/tmp"
         ],
         "measurement": [
+          # ディスクの空き容量。
           {"name": "free", "rename": "DISK_FREE", "unit": "Gigabytes"},
-          "total",
-          "used"
+          "total",  # 使用済み容量と空き容量を含む、ディスクの合計容量。
+          "used"    # ディスクの使用済み容量。
         ],
          "ignore_file_system_types": [
           "sysfs", "devtmpfs"
@@ -99,26 +104,26 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
           "*"
         ],
         "measurement": [
-          "reads",
-          "writes",
-          "read_time",
-          "write_time",
-          "io_time"
+          "reads",      # ディスク読み取り操作の回数。
+          "writes",     # ディスク書き込み操作の回数。
+          "read_time",  # 読み取りリクエストがディスクで待機した時間の長さ。
+          "write_time", # 書き込みリクエストがディスクで待機した時間の長さ。
+          "io_time"     # ディスクが I/O リクエストをキューに入れている時間の長さ。
         ],
         "metrics_collection_interval": 60
       },
       "swap": {
         "measurement": [
-          "swap_used",
-          "swap_free",
-          "swap_used_percent"
+          "swap_used",        # 現在使用中のスワップスペースの量。
+          "swap_free",        # 使用されていないスワップスペースの量。
+          "swap_used_percent" # 現在使用中のスワップスペースの割合。
         ]
       },
       "mem": {
         "measurement": [
-          "mem_used",
-          "mem_cached",
-          "mem_total"
+          "mem_used",   # 現在使用中のメモリの量。
+          "mem_cached", # ファイルキャッシュに使用されているメモリの量。
+          "mem_total"   # メモリの合計量。
         ],
         "metrics_collection_interval": 1
       },
@@ -127,25 +132,25 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
           "eth0"
         ],
         "measurement": [
-          "bytes_sent",
-          "bytes_recv",
-          "drop_in",
-          "drop_out"
+          "bytes_sent", # ネットワークインターフェイスで送信されたバイトの数。
+          "bytes_recv", # ネットワークインターフェイスで受信されたバイトの数
+          "drop_in",    # このネットワークインターフェイスで受信されたパケットのうち、削除されたものの数。
+          "drop_out"    # このネットワークインターフェイスで送信されたパケットのうち、削除されたものの数。
         ]
       },
       "netstat": {
         "measurement": [
-          "tcp_established",
-          "tcp_syn_sent",
-          "tcp_close"
+          "tcp_established",  # 確立された TCP 接続の数。
+          "tcp_syn_sent",     # 接続リクエストを送信したあとに一致する接続リクエストを待機している TCP 接続の数。
+          "tcp_close"         # 状態のない TCP 接続の数。
         ],
         "metrics_collection_interval": 60
       },
       "processes": {
         "measurement": [
-          "running",
-          "sleeping",
-          "dead"
+          "running",  # 実行されているプロセスの数。
+          "sleeping", # スリープ状態になっているプロセスの数。
+          "dead"      # 「dead」となっているプロセスの数。
         ]
       }
     },

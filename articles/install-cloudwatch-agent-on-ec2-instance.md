@@ -52,20 +52,25 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file-wizard.html
 :::
 
-AWSが提供するサンプルをもとに必要に応じて内容を変更する。
+AWSが提供するサンプルをもとに必要に応じて内容を変更する。設定ファイルはトラブルシューティングを簡単にするため `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json` のパスに作成することが推奨されている。
+
+> エージェント設定ファイルを手動で作成または編集する場合は、任意の名前を付けることができます。トラブルシューティングを簡単にするため、Linux サーバーでは、/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json、Windows Server を実行しているサーバーでは、$Env:ProgramData\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent.json という名前を付けることをお勧めします。
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Complete-Example
 
 ```json:amazon-cloudwatch-agent.json
 {
   "agent": {
+    # この設定ファイルで指定されたすべてのメトリクスが収集される頻度を指定
     "metrics_collection_interval": 10,
-    # エージェントのログファイル出力先
+    # CloudWatch エージェントがログメッセージを書き込む場所を指定
     "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
   },
   "metrics": {
+    # エージェントによって収集されるメトリクスに使用する名前空間
     "namespace": "MyCustomNamespace",
-    "metrics_collected": { # CloudWatch Metricsに送信するメトリクスのリスト
+    # 収集するメトリクスを指定
+    "metrics_collected": {
       "cpu": {
         "resources": [
           "*"
@@ -78,6 +83,7 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
           # ゲストオペレーティングシステムで CPU が仮想 CPU を実行している時間の割合。
           "cpu_usage_guest"
         ],
+        # すべての CPU コア間で集計された cpu メトリクスを報告するかどうかを指定
         "totalcpu": false,
         "metrics_collection_interval": 10,
         "append_dimensions": {
@@ -96,7 +102,8 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
           "total",  # 使用済み容量と空き容量を含む、ディスクの合計容量。
           "used"    # ディスクの使用済み容量。
         ],
-         "ignore_file_system_types": [
+        # disk メトリクスを収集するときに除外するファイルシステムのタイプを指定
+        "ignore_file_system_types": [
           "sysfs", "devtmpfs"
         ],
         "metrics_collection_interval": 60,
@@ -160,19 +167,23 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
         ]
       }
     },
+    # エージェントによって収集されたメトリクスに Amazon EC2 メトリクスのディメンションを追加
     "append_dimensions": {
-      "ImageId": "${aws:ImageId}",
-      "InstanceId": "${aws:InstanceId}",
-      "InstanceType": "${aws:InstanceType}",
-      "AutoScalingGroupName": "${aws:AutoScalingGroupName}"
+      "ImageId": "${aws:ImageId}",                          # インスタンスの AMI ID を ImageID ディメンションの値として設定
+      "InstanceId": "${aws:InstanceId}",                    # インスタンスのインスタンス ID を InstanceID ディメンションの値として設定
+      "InstanceType": "${aws:InstanceType}",                # インスタンスのインスタンスタイプを InstanceType ディメンションの値として設定
+      "AutoScalingGroupName": "${aws:AutoScalingGroupName}" # インスタンスの Auto Scaling グループ名を AutoScalingGroupName ディメンションの値として設定
     },
+    # 収集されたメトリクスが集計されるディメンションを指定
     "aggregation_dimensions" : [["ImageId"], ["InstanceId", "InstanceType"], ["d1"],[]],
+    # メトリクスがサーバーに送信されるまでにメモリバッファ内に残留する最大時間を秒単位で指定
     "force_flush_interval" : 30
   },
   "logs": {
+    # サーバーから収集するログファイルを指定
     "logs_collected": {
       "files": {
-        "collect_list": [ # CloudWatch Logsに送信するログファイルのリスト
+        "collect_list": [
           {
             "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
             "log_group_name": "amazon-cloudwatch-agent.log",
@@ -188,15 +199,14 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-
         ]
       }
     },
+    # 個別のログストリーム名が collect_list パラメータに定義されていない場合、代わりに使用するデフォルトのログストリーム名を指定
     "log_stream_name": "my_log_stream_name",
     "force_flush_interval" : 15
   }
 }
 ```
 
-トラブルシューティングを簡単にするため `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json` に作成することが推奨されている。
-
-> エージェント設定ファイルを手動で作成または編集する場合は、任意の名前を付けることができます。トラブルシューティングを簡単にするため、Linux サーバーでは、/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json、Windows Server を実行しているサーバーでは、$Env:ProgramData\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent.json という名前を付けることをお勧めします。
+設定ファイルの構造やその他のフィールドについては以下を参照
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html
 
@@ -233,4 +243,6 @@ statusが`running`になっていればOK
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html#CloudWatch-Agent-troubleshooting-verify-running
 
-動作していない場合は[トラブルシューティングページ](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html)を参照
+動作していない場合はトラブルシューティングを参照
+
+https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html

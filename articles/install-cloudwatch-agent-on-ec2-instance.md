@@ -22,7 +22,7 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/Install-Clo
 - amazon-cloudwatch-agent
   - 1.247350.0
 
-# CloudWatchエージェントで使用するIAMロールの作成
+# エージェントで使用するIAMロールの作成
 
 CloudWatchエージェントがCloudWatchにメトリクスを書き込むために必要なアクセス許可をEC2に付与
 
@@ -37,7 +37,7 @@ CloudWatchエージェントがCloudWatchにメトリクスを書き込むため
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent-commandline.html
 
-# CloudWatchエージェントのインストール
+# エージェントのインストール
 
 ```
 sudo yum install -y amazon-cloudwatch-agent
@@ -45,10 +45,16 @@ sudo yum install -y amazon-cloudwatch-agent
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cloudwatch-agent-commandline.html
 
-# CloudWatchエージェント設定ファイルの作成
+# エージェント設定ファイルの作成
 
-- 諸事情により[ウィザード](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file-wizard.html)を使わず手動で作成する。
-- AWSが提供する[サンプル](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Complete-Example)をもとに必要に応じて内容を変更する。
+:::message
+諸事情によりウィザードを使わず手動で作成する。
+https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/create-cloudwatch-agent-configuration-file-wizard.html
+:::
+
+AWSが提供するサンプルをもとに必要に応じて内容を変更する。
+
+https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html#CloudWatch-Agent-Configuration-File-Complete-Example
 
 ```
 {
@@ -188,11 +194,17 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/download-cl
 }
 ```
 
-トラブルシューティングを簡単にするため `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json` に作成することが[推奨](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html)されている。
+トラブルシューティングを簡単にするため `/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json` に作成することが推奨されている。
 
 > エージェント設定ファイルを手動で作成または編集する場合は、任意の名前を付けることができます。トラブルシューティングを簡単にするため、Linux サーバーでは、/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json、Windows Server を実行しているサーバーでは、$Env:ProgramData\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent.json という名前を付けることをお勧めします。
 
-# CloudWatchエージェントの起動
+https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html
+
+CloudWatchエージェントで取得できるその他のメトリクスは以下を参照
+
+https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html
+
+# エージェントの起動
 
 ```
 sudo amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
@@ -211,7 +223,7 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/install-Clo
 
 https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html#CloudWatch-Agent-options-help
 
-# CloudWatchエージェントの動作確認
+# エージェントの起動確認
 
 ```
 sudo amazon-cloudwatch-agent-ctl -m ec2 -a status

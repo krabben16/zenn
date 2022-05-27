@@ -239,7 +239,9 @@ https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshoo
 sudo amazon-cloudwatch-agent-ctl -m ec2 -a status
 ```
 
-statusが`running`になっていればOK。[^1]動作していない場合はトラブルシューティングを参照
+statusが`running`になっていればOK[^1]
+
+動作していない場合はトラブルシューティングを参照
 
 [^1]: https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html#CloudWatch-Agent-troubleshooting-verify-running
 

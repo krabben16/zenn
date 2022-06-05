@@ -103,7 +103,7 @@ $ npm run build
 > tsc
 ```
 
-`npm run build`を実行するとCDKのコード `index.ts` をコンパイルした `index.js` が出力されます。
+`npm run build`を実行するとTSのコード `index.ts` をコンパイルした `index.js` が出力されます。
 
 # アプリケーションのテスト
 Jestによるテストファイルが予め用意されています。

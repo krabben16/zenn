@@ -195,8 +195,7 @@ current credentials could not be used to assume 'arn:aws:iam::xxxx:role/cdk-hnb6
 LambdaCronExample: SSM parameter /cdk-bootstrap/hnb659fds/version not found. Has the environment been bootstrapped? Please run 'cdk bootstrap' (see https://docs.aws.amazon.com/cdk/latest/guide/bootstrapping.html)
 ```
 
-エラーメッセージの最後で `cdk bootstrap` を実行するよう指示されています。
-ドキュメントを確認すると以下の記述がありました。
+エラーメッセージの最後で `cdk bootstrap` を実行するよう指示されており、ドキュメントを確認すると以下の記述がありました。
 CDKを実行するために必要なAWSリソース（S3バケットやIAMロールなど）があり、それらのリソースをプロビジョニングする工程が"bootstrap"だと解釈しました。
 
 > Deploying AWS CDK apps into an AWS environment (a combination of an AWS account and region) may require that you provision resources the AWS CDK needs to perform the deployment. These resources include an Amazon S3 bucket for storing files and IAM roles that grant permissions needed to perform deployments. The process of provisioning these initial resources is called bootstrapping.

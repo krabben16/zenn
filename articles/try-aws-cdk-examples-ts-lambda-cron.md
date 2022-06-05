@@ -1,16 +1,14 @@
 ---
 title: "CDK+TSのサンプルLambda-Cronを実行する" # 記事のタイトル
-emoji: "" # アイキャッチとして使われる絵文字（1文字だけ）
+emoji: "🥾" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["aws", "lambda", "eventbridge", "cron"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["aws", "lambda", "eventbridge", "cron", "typescript", "jest"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: false # 公開設定（falseにすると下書き）
 ---
 
 # はじめに
 CDK+TypeScriptの勉強のため、Lambda-Cronと呼ばれるサンプルを動かしてみます。
 2022/06/05時点のソースコードを実行します。
-
-> This example creates a new lambda function that executes every day at 6pm UTC, as dictated by a cron scheduled event.
 
 https://github.com/aws-samples/aws-cdk-examples/tree/master/typescript/lambda-cron
 
@@ -73,6 +71,13 @@ new LambdaCronStack(app, 'LambdaCronExample');
 app.synth();
 ```
 
+```py:lambda-handler.py
+def main(event, context):
+    print("I'm running!")
+```
+
+毎週月〜金の午後6時（UTC）に特定の文字列を出力します。
+
 aws-cdk-libのドキュメント
 https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
 
@@ -96,7 +101,7 @@ found 0 vulnerabilities
 
 ```sh
 $ npm run build
-> lambda-cron@1.0.0 build /Users/h.kawaguchi/projects/aws-cdk-examples/typescript/lambda-cron
+> lambda-cron@1.0.0 build /Users/xxxx/projects/aws-cdk-examples/typescript/lambda-cron
 > tsc
 ```
 
@@ -107,9 +112,9 @@ Jestによるテストファイルが予め用意されています。
 以下のコマンドを実行します。
 
 ```sh
-$ npm run test 
+$ npm run test
 
-> lambda-cron@1.0.0 test /Users/h.kawaguchi/projects/aws-cdk-examples/typescript/lambda-cron
+> lambda-cron@1.0.0 test /Users/xxxx/projects/aws-cdk-examples/typescript/lambda-cron
 > jest --config=jest.config.js
 
  PASS  ./lambda-cron.test.js
@@ -199,3 +204,73 @@ CDKを実行するために必要なAWSリソース（S3バケットやIAMロー
 https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html
 
 # bootstrapの実行
+以下のコマンドを実行します。
+
+```sh
+$ cdk bootstrap
+ ⏳  Bootstrapping environment aws://xxxx/ap-northeast-1...
+Trusted accounts for deployment: (none)
+Trusted accounts for lookup: (none)
+Using default execution policy of 'arn:aws:iam::aws:policy/AdministratorAccess'. Pass '--cloudformation-execution-policies' to customize.
+CDKToolkit: creating CloudFormation changeset...
+ ✅  Environment aws://xxxx/ap-northeast-1 bootstrapped.
+```
+
+CloudFormationのスタック `CDKToolkit` が作成されました。
+
+# CDKのデプロイ（2回目）
+以下のコマンドを実行します。
+
+```sh
+$ cdk deploy   
+
+✨  Synthesis time: 0.78s
+
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
+
+IAM Statement Changes
+┌───┬─────────────────────────────┬────────┬─────────────────────────────┬─────────────────────────────┬───────────────────────────────┐
+│   │ Resource                    │ Effect │ Action                      │ Principal                   │ Condition                     │
+├───┼─────────────────────────────┼────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ + │ ${Singleton.Arn}            │ Allow  │ lambda:InvokeFunction       │ Service:events.amazonaws.co │ "ArnLike": {                  │
+│   │                             │        │                             │ m                           │   "AWS:SourceArn": "${Rule.Ar │
+│   │                             │        │                             │                             │ n}"                           │
+│   │                             │        │                             │                             │ }                             │
+├───┼─────────────────────────────┼────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────┤
+│ + │ ${Singleton/ServiceRole.Arn │ Allow  │ sts:AssumeRole              │ Service:lambda.amazonaws.co │                               │
+│   │ }                           │        │                             │ m                           │                               │
+└───┴─────────────────────────────┴────────┴─────────────────────────────┴─────────────────────────────┴───────────────────────────────┘
+IAM Policy Changes
+┌───┬──────────────────────────┬────────────────────────────────────────────────────────────────────────────────┐
+│   │ Resource                 │ Managed Policy ARN                                                             │
+├───┼──────────────────────────┼────────────────────────────────────────────────────────────────────────────────┤
+│ + │ ${Singleton/ServiceRole} │ arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole │
+└───┴──────────────────────────┴────────────────────────────────────────────────────────────────────────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Do you wish to deploy these changes (y/n)? y
+LambdaCronExample: deploying...
+[0%] start: Publishing xxxx:current_account-current_region
+[100%] success: Published xxxx:current_account-current_region
+LambdaCronExample: creating CloudFormation changeset...
+
+ ✅  LambdaCronExample
+
+✨  Deployment time: 131.35s
+
+Stack ARN:
+arn:aws:cloudformation:ap-northeast-1:xxxx:stack/LambdaCronExample/xxxx
+
+✨  Total time: 132.13s
+```
+
+デプロイが成功しました🎉
+
+# おわりに
+CDK+TSのサンプルを動かしました。
+CloudFormationのテンプレートはJSON/YAMLで実装する必要があり辛さを感じていましたが、CDKを導入することでテンプレートをプログラミング言語で実装できるようになりコードの抽象化・モジュール化が可能になります。
+また、TSを使うことで入力補完や型チェックの恩恵を受けられるようになり開発速度の向上が見込めるのではないでしょうか。（TSに限った話ではないと思いますが）
+
+最近TerraformからCloudFormationへの乗り換えを検討しており、Terraformの独自記法（HCL）ではなく使い慣れたプログラミング言語でリソースを構築できることにかなりのメリットを感じました。
+CDKに興味が出てきたのでもっと深掘りしてみようと思います👀

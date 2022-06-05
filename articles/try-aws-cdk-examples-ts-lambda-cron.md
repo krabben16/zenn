@@ -55,8 +55,6 @@ export class LambdaCronStack extends cdk.Stack {
     });
 
     // EventBridgeのルールを作成
-    // Run 6:00 PM UTC every Monday through Friday
-    // See https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html
     const rule = new events.Rule(this, 'Rule', {
       schedule: events.Schedule.expression('cron(0 18 ? * MON-FRI *)')
     });

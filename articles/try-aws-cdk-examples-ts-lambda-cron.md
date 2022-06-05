@@ -196,7 +196,7 @@ LambdaCronExample: SSM parameter /cdk-bootstrap/hnb659fds/version not found. Has
 ```
 
 エラーメッセージの最後で `cdk bootstrap` を実行するよう指示されており、ドキュメントを確認すると以下の記述がありました。
-CDKを実行するために必要なAWSリソース（S3バケットやIAMロールなど）があり、それらのリソースをプロビジョニングする工程が"bootstrap"だと解釈しました。
+CDKを実行するために必要なAWSリソース（S3バケットやIAMロールなど）があり、それらのリソースをプロビジョニングする工程を"bootstrap"と呼んでいるそうです。
 
 > Deploying AWS CDK apps into an AWS environment (a combination of an AWS account and region) may require that you provision resources the AWS CDK needs to perform the deployment. These resources include an Amazon S3 bucket for storing files and IAM roles that grant permissions needed to perform deployments. The process of provisioning these initial resources is called bootstrapping.
 

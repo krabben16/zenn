@@ -42,7 +42,7 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 コマンドの実行後にターミナルを再起動すれば完了です。
 `~/.zshrc`にzimの設定が追記されています。
 
-# 有効になる機能
+# モジュールの機能
 デフォルトだと以下のモジュールが読み込まれています。
 
 |モジュール名|説明|
@@ -85,3 +85,9 @@ $ zimfw install
 ```
 
 テーマモジュールのインストール後、ターミナルを再起動すれば完了です。
+
+# チートシート
+便利なコマンドのエイリアスが組み込まれています。
+例えば `G` は `git` のエイリアスとなっています。
+
+https://zimfw.sh/docs/cheatsheet/

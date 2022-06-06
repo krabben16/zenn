@@ -42,6 +42,24 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 コマンドの実行後にターミナルを再起動すれば完了です。
 `~/.zshrc`にzimの設定が追記されています。
 
+デフォルトで以下のモジュールが有効になっています。
+
+|モジュール名|説明|
+|---|---|
+|environment|Sets sane Zsh built-in environment options.|
+|git|Provides handy git aliases and functions.|
+|input|Applies correct bindkeys for input events.|
+|termtitle|Sets a custom terminal title.|
+|utility|Utility aliases and functions. Adds colour to ls, grep and less.|
+|duration-info|Exposes to prompts how long the last command took to execute, used by asciiship.|
+|git-info|Exposes git repository status information to prompts, used by asciiship.|
+|asciiship|A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.|
+|zsh-users/zsh-completions --fpath src|Additional completion definitions for Zsh.|
+|completion|Enables and configures smart and extensive tab completion.completion must be sourced after all modules that add completion definitions.|
+|zsh-users/zsh-syntax-highlighting|Fish-like syntax highlighting for Zsh.zsh-users/zsh-syntax-highlighting must be sourced after completion|
+|zsh-users/zsh-history-substring-search|Fish-like history search (up arrow) for Zsh.zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting|
+|zsh-users/zsh-autosuggestions|Fish-like autosuggestions for Zsh.|
+
 # テーマの変更
 デフォルトではasciishipというテーマが適用されています。
 テーマを変更したい場合は`~/.zimrc`を編集します。

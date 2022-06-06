@@ -15,7 +15,7 @@ Preztoも十分速いのでは…？🤔
 測定方法、結果については以下のWikiで確認できます。
 https://github.com/zimfw/zimfw/wiki/Speed
 
-# 環境構築
+# 検証環境
 - M1 MBP@12.4
 - Zsh@5.8.1
 - Zim@1.9.1
@@ -61,7 +61,7 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 |zsh-users/zsh-history-substring-search|Zsh用のFishのような履歴検索。zsh-users/zsh-history-substring-searchはzsh-users/zsh-syntax-highlightingの後に読み込む必要があります。|
 |zsh-users/zsh-autosuggestions|Zsh用のFishのようなオートサジェスト|
 
-その他のモジュールリスト
+その他のモジュールの一覧
 https://zimfw.sh/docs/modules/
 
 # テーマの変更
@@ -90,4 +90,10 @@ $ zimfw install
 便利なコマンドのエイリアスが組み込まれています。
 例えば `G` は `git` のエイリアスとなっています。
 
+エイリアスの一覧
 https://zimfw.sh/docs/cheatsheet/
+
+# おわりに
+インストールするとすぐにオートサジェストやシンタックスハイライトが有効になるのが便利ですね👍
+デフォルトの状態でも十分便利ですが、以下の記事のようにモジュールの挙動を細かくカスタマイズすることも可能なので気になる方は試してみてはいかがでしょうか。
+https://takuyatsuchida.com/build-zsh-environment-by-zim-framework/

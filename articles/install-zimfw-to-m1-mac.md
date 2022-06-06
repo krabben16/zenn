@@ -53,8 +53,8 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 |git-info|asciishipで使用される、gitリポジトリの状態情報をプロンプトに公開します。|
 |asciiship|スペースシップとスターシップのプロンプトを大幅に縮小した、ASCIIのみのバージョンです。|
 |zsh-users/zsh-completions --fpath src|Zshの補完定義を追加します。|
-|completion|スマートで広範囲なタブ補完を有効にし設定します。completionは補完定義を追加するすべてのモジュールの後に読み込む必要があります。|
-|zsh-users/zsh-syntax-highlighting|Zsh用のFishのようなシンタックスハイライト。zsh-users/zsh-syntax-highlightingはCompletionモジュールの後に読み込む必要があります。|
+|completion|スマートで広範囲なタブ補完を有効にし設定します。completionモジュールは補完定義を追加するすべてのモジュールの後に読み込む必要があります。|
+|zsh-users/zsh-syntax-highlighting|Zsh用のFishのようなシンタックスハイライト。zsh-users/zsh-syntax-highlightingはcompletionモジュールの後に読み込む必要があります。|
 |zsh-users/zsh-history-substring-search|Zsh用のFishのような履歴検索。zsh-users/zsh-history-substring-searchはzsh-users/zsh-syntax-highlightingの後に読み込む必要があります。|
 |zsh-users/zsh-autosuggestions|Zsh用のFishのようなオートサジェスト|
 

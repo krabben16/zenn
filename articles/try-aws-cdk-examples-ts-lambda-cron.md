@@ -17,12 +17,20 @@ https://github.com/aws-samples/aws-cdk-examples/tree/master/typescript/lambda-cr
 https://github.com/aws-samples/aws-cdk-examples
 
 # 検証環境
-- node
-  - 14.19.3
-- npm
-  - 6.14.17
-- aws-cdk
-  - 2.27.0
+- M1 MBP@12.4
+  - node@14.19.3
+  - npm@6.14.17
+  - aws-cdk@2.27.0
+
+- package.json
+  - dependencies
+    - aws-cdk-lib@2.27.0
+    - constructs@10.1.27
+  - devDependencies
+    - @types/jest@26.0.24
+    - @types/node@10.17.60
+    - jest@26.6.3
+    - typescript@4.6.4
 
 # AWS CDK Toolkit (aws-cdk) のインストール
 

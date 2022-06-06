@@ -18,17 +18,16 @@ https://github.com/aws-samples/aws-cdk-examples
 
 # 検証環境
 - M1 MBP@12.4
-  - node@14.19.3
-  - npm@6.14.17
-  - npmパッケージ（グローバル）
-    - aws-cdk@2.27.0
-  - npmパッケージ（ローカル）
-    - aws-cdk-lib@2.27.0
-    - constructs@10.1.27
-    - @types/jest@26.0.24
-    - @types/node@10.17.60
-    - jest@26.6.3
-    - typescript@4.6.4
+- node@14.19.3
+- npm@6.14.17
+- npm packages
+  - aws-cdk@2.27.0
+  - aws-cdk-lib@2.27.0
+  - constructs@10.1.27
+  - @types/jest@26.0.24
+  - @types/node@10.17.60
+  - jest@26.6.3
+  - typescript@4.6.4
 
 # AWS CDK Toolkit (aws-cdk) のインストール
 

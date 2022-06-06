@@ -43,7 +43,7 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 `~/.zshrc`にzimの設定が追記されています。
 
 # 有効になる機能
-デフォルトで以下のモジュールが読み込まれています。
+デフォルトだと以下のモジュールが読み込まれています。
 
 |モジュール名|説明|
 |---|---|
@@ -61,11 +61,14 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 |zsh-users/zsh-history-substring-search|Zsh用のFishのような履歴検索。zsh-users/zsh-history-substring-searchはzsh-users/zsh-syntax-highlightingの後に読み込む必要があります。|
 |zsh-users/zsh-autosuggestions|Zsh用のFishのようなオートサジェスト|
 
+その他のモジュールリスト
+https://zimfw.sh/docs/modules/
+
 # テーマの変更
 デフォルトではasciishipというテーマが適用されています。
 テーマを変更したい場合は`~/.zimrc`を編集します。
 
-```
+```rc:.zimrc
 # asciishipをコメントアウト
 # zmodule asciiship
 # 設定したいテーマ名を指定

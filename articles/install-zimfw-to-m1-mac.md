@@ -7,7 +7,7 @@ published: false # 公開設定（falseにすると下書き）
 ---
 
 # Zimとは何ですか？
-プラグインマネージャ、便利なモジュール、豊富なテーマを速度を犠牲にすることなくバンドルしたZsh構成フレームワークです。最初のプロンプトが表示されるまでの時間を測定したところ、測定対象の中で上から3番目という結果が示されています。以前に使ったことのあるPreztoが約0.14sec、Zimはその半分以下の約0.06secでした。Preztoも十分速いのでは…？🤔
+プラグインマネージャ、便利なモジュール、豊富なテーマを速度を犠牲にすることなくバンドルしたZsh構成フレームワークです。最初のプロンプトが表示されるまでの時間を測定したところ、測定対象の中で上から3番目という結果が示されています。以前に使ったことのあるPreztoは約0.14sec、Zimはその半分以下の約0.06secでした。Preztoも十分速いのでは…？🤔
 
 測定方法、結果については以下のWikiで確認できます。
 https://github.com/zimfw/zimfw/wiki/Speed
@@ -19,8 +19,8 @@ https://github.com/zimfw/zimfw/wiki/Speed
 
 # インストール
 自動インストール、手動インストールがあります。
-今回は簡単な自動インストールを試します。
-インストール手順はREADMEに記載されています。
+今回は簡単に導入できる自動インストールを試します。
+インストール手順はREADMEを参照しました。
 
 https://github.com/zimfw/zimfw
 
@@ -39,7 +39,7 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 コマンドの実行後にターミナルを再起動すれば完了です。
 `~/.zshrc`にzimの設定が追記されています。
 
-# モジュールの機能
+# 有効になる機能
 デフォルトだと以下のモジュールが読み込まれています。
 
 |モジュール名|説明|
@@ -65,7 +65,7 @@ https://zimfw.sh/docs/modules/
 デフォルトではasciishipというテーマが適用されています。
 テーマを変更したい場合は`~/.zimrc`を編集します。
 
-```rc:.zimrc
+```sh:.zimrc
 # asciishipをコメントアウト
 # zmodule asciiship
 # 設定したいテーマ名を指定

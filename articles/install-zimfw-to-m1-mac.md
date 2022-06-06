@@ -42,31 +42,33 @@ All done. Enjoy your Zsh IMproved! Restart your terminal for changes to take eff
 コマンドの実行後にターミナルを再起動すれば完了です。
 `~/.zshrc`にzimの設定が追記されています。
 
-デフォルトで以下のモジュールが有効になっています。
+# 有効になる機能
+デフォルトで以下のモジュールが読み込まれています。
 
 |モジュール名|説明|
 |---|---|
-|environment|Sets sane Zsh built-in environment options.|
-|git|Provides handy git aliases and functions.|
-|input|Applies correct bindkeys for input events.|
-|termtitle|Sets a custom terminal title.|
-|utility|Utility aliases and functions. Adds colour to ls, grep and less.|
-|duration-info|Exposes to prompts how long the last command took to execute, used by asciiship.|
-|git-info|Exposes git repository status information to prompts, used by asciiship.|
-|asciiship|A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.|
-|zsh-users/zsh-completions --fpath src|Additional completion definitions for Zsh.|
-|completion|Enables and configures smart and extensive tab completion.completion must be sourced after all modules that add completion definitions.|
-|zsh-users/zsh-syntax-highlighting|Fish-like syntax highlighting for Zsh.zsh-users/zsh-syntax-highlighting must be sourced after completion|
-|zsh-users/zsh-history-substring-search|Fish-like history search (up arrow) for Zsh.zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting|
-|zsh-users/zsh-autosuggestions|Fish-like autosuggestions for Zsh.|
+|environment|正常なZsh組み込み環境オプションを設定します。|
+|git|便利なgitエイリアスや関数を提供します。|
+|input|入力イベントに対して正しいバインドキーを適用します。|
+|termtitle|カスタム端末のタイトルを設定します。|
+|utility|ユーティリティのエイリアスや関数。ls, grep, lessに色をつけます。|
+|duration-info|asciishipで使用される、最後のコマンドの実行にかかった時間をプロンプトに公開します。|
+|git-info|asciishipで使用される、gitリポジトリの状態情報をプロンプトに公開します。|
+|asciiship|スペースシップとスターシップのプロンプトを大幅に縮小した、ASCIIのみのバージョンです。|
+|zsh-users/zsh-completions --fpath src|Zshの補完定義を追加します。|
+|completion|スマートで広範囲なタブ補完を有効にし設定します。completionは補完定義を追加するすべてのモジュールの後に読み込む必要があります。|
+|zsh-users/zsh-syntax-highlighting|Zsh用のFishのようなシンタックスハイライト。zsh-users/zsh-syntax-highlightingはCompletionモジュールの後に読み込む必要があります。|
+|zsh-users/zsh-history-substring-search|Zsh用のFishのような履歴検索。zsh-users/zsh-history-substring-searchはzsh-users/zsh-syntax-highlightingの後に読み込む必要があります。|
+|zsh-users/zsh-autosuggestions|Zsh用のFishのようなオートサジェスト|
 
 # テーマの変更
 デフォルトではasciishipというテーマが適用されています。
 テーマを変更したい場合は`~/.zimrc`を編集します。
-自分の環境ではファイルの末尾に以下を追記しました。
 
 ```
-# 変更したいテーマ名を指定
+# asciishipをコメントアウト
+# zmodule asciiship
+# 設定したいテーマ名を指定
 zmodule steeef
 ```
 

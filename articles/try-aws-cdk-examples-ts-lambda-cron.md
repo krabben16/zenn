@@ -79,7 +79,7 @@ def main(event, context):
     print("I'm running!")
 ```
 
-毎週月〜金の午後6時（UTC）に特定の文字列を出力します。
+毎週月〜金の午後6時（UTC、JSTだと翌日の午前3時）に特定の文字列を出力します。
 
 aws-cdk-libのドキュメント
 https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
@@ -346,6 +346,9 @@ arn:aws:cloudformation:ap-northeast-1:xxxx:stack/LambdaCronExample/xxxx
 ```
 
 デプロイが成功しました🎉
+CloudWatchでログを確認すると午前3時にLambda関数が実行された形跡を確認できました。
+
+![](https://storage.googleapis.com/zenn-user-upload/f183d1208217-20220607.png)
 
 # おわりに
 CDK+TSのサンプルを動かしました。

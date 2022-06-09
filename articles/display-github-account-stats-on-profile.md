@@ -25,7 +25,7 @@ https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-gith
 
 https://metrics.lecoq.io/
 
-また、統計情報を取得するためのGitHub Actionsのコードが出力されます。デフォルトの設定だと以下のコードが表示されます。
+また、取得した統計情報を画像に変換するGitHub Actionsのコードが出力されます。デフォルトの設定だと以下のコードが出力されます。
 
 ```yml
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference

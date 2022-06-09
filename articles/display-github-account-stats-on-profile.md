@@ -29,7 +29,9 @@ https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-gith
 
 https://metrics.lecoq.io/
 
-また、取得した統計情報を画像に変換するGitHub Actionsのコードが出力されます。デフォルトの設定だと以下のコードが出力されます。
+![](https://storage.googleapis.com/zenn-user-upload/3d2ffb3e3237-20220610.png)
+
+また、Action codeタブに統計情報を画像に変換するGitHub Actionsのコードが出力されます。
 
 ```yml
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference

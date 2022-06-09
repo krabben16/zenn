@@ -99,6 +99,8 @@ GitHubアカウントのOverviewを表示した時にsvgが表示されていれ
 ![](https://storage.googleapis.com/zenn-user-upload/557446a90ad1-20220609.png)
 
 # おわりに
-統計情報のお気に入りはMost used languagesです。その他にも統計情報を視覚的に表示するプラグインがいろいろ用意されているので、プロフィールの見せ方のバリエーションが広がりますね🧐
+お気に入りはMost used languagesです。その他にも統計情報を視覚的に表示するプラグインがいろいろ用意されているので、プロフィールの見せ方のバリエーションが広がりますね🧐
 
-https://github.com/lowlighter/metrics/blob/master/README.md
+プラグインの一覧
+
+https://github.com/lowlighter/metrics/blob/master/README.md#-plugins

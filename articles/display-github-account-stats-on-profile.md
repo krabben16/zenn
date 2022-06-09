@@ -101,7 +101,7 @@ secretsは暗号化された環境変数のことです。生成したPersonal A
 ![](https://storage.googleapis.com/zenn-user-upload/e851a111f463-20220609.png)
 
 # README.mdの作成
-生成した画像を読み込むマークダウンファイルを作成します。
+出力した画像を読み込むマークダウンファイルを作成します。
 
 https://github.com/krabben16/krabben16/blob/master/README.md
 

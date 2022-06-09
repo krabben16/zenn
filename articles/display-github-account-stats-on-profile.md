@@ -11,7 +11,7 @@ GitHubアカウントのOverviewに表示されるやつです。
 
 ![](https://storage.googleapis.com/zenn-user-upload/cb71a47c76c2-20220609.png)
 
-こちらのインフォグラフィックジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどの形で取得できます。
+こちらのインフォグラフィックジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどの形で出力できます。
 
 https://github.com/lowlighter/metrics
 
@@ -31,7 +31,7 @@ https://metrics.lecoq.io/
 
 ![](https://storage.googleapis.com/zenn-user-upload/3d2ffb3e3237-20220610.png)
 
-また、Action codeタブに統計情報を画像に変換するGitHub Actionsのコードが出力されます。
+また、Action codeタブに統計情報を画像に出力するGitHub Actionsのコードが出力されます。
 
 ```yml
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
@@ -68,7 +68,7 @@ jobs:
 ```
 
 :::message
-出力フォーマットを指定するオプション`config_output`のデフォルト値は`auto`です。autoはテンプレートで指定した出力フォーマットに従います。ソースの該当箇所を見つけられませんでしたがおそらくclassicテンプレートで出力フォーマットにSVGを指定しています。
+出力フォーマットを指定するオプション`config_output`を設定しなかった場合のデフォルト値は`auto`です。autoはテンプレートで指定した出力フォーマットに従います。ソースの該当箇所を見つけられませんでしたがおそらくclassicテンプレートの出力フォーマットでSVGを指定しているのだと思います。
 :::
 
 https://github.com/lowlighter/metrics/blob/master/source/plugins/core/README.md#config_output

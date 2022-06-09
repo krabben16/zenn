@@ -7,7 +7,7 @@ published: true # 公開設定（falseにすると下書き）
 ---
 
 # はじめに
-以下のインフォグラフィックスジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどにレンダリングできます。
+以下のインフォグラフィックジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどにレンダリングできます。
 
 https://github.com/lowlighter/metrics
 

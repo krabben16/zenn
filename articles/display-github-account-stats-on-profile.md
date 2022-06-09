@@ -96,7 +96,7 @@ secretsは暗号化された環境変数のことです。生成したPersonal A
 ![](https://storage.googleapis.com/zenn-user-upload/f8c7dc7a4868-20220609.png)
 
 ## ワークフローの動作確認
-設定が問題なければGitHub Actionsが正常に動作してリポジトリに`github-metrics.svg`というファイルがコミットされています。画像を生成するワークフローはyamlの`schedule`で設定した通り1時間に1回実行されます。
+設定が問題なければGitHub Actionsが正常に動作してリポジトリに`github-metrics.svg`というファイルがコミットされています。画像を出力するワークフローはyamlの`schedule`で設定した通り1時間に1回実行されます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/e851a111f463-20220609.png)
 

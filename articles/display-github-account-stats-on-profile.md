@@ -1,5 +1,5 @@
 ---
-title: "GitHubアカウントの統計情報をプロフィールに表示する" # 記事のタイトル
+title: "GitHubアカウントの統計情報を定期的に取得してプロフィールに表示する" # 記事のタイトル
 emoji: "🔍" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["github", "githubactions"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -7,7 +7,11 @@ published: true # 公開設定（falseにすると下書き）
 ---
 
 # はじめに
-以下のインフォグラフィックジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどにレンダリングできます。
+GitHubアカウントのOverviewに表示されるやつです。
+
+![](https://storage.googleapis.com/zenn-user-upload/cb71a47c76c2-20220609.png)
+
+こちらのインフォグラフィックジェネレーターを使用します。GitHubアカウントの統計情報をSVG、Markdown、PDF、JSONなどの形で取得できます。
 
 https://github.com/lowlighter/metrics
 

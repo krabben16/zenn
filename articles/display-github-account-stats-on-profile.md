@@ -91,10 +91,6 @@ secretsは暗号化された環境変数のことです。生成したPersonal A
 # README.mdの作成
 生成したsvgを読み込むマークダウンファイルを作成します。
 
-```md:README.md
-![Metrics](/github-metrics.svg)
-```
-
 https://github.com/krabben16/krabben16/blob/master/README.md
 
 # 完成

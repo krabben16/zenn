@@ -31,7 +31,7 @@ https://metrics.lecoq.io/
 
 ![](https://storage.googleapis.com/zenn-user-upload/3d2ffb3e3237-20220610.png)
 
-また、Action codeタブに統計情報を画像に出力するGitHub Actionsのコードが出力されます。
+また、Action codeタブに統計情報を画像の形で出力するGitHub Actionsのコードが生成されます。
 
 ```yml
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference

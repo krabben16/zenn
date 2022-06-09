@@ -67,6 +67,12 @@ jobs:
           config_timezone: Asia/Tokyo
 ```
 
+:::message
+出力フォーマットを指定するオプション`config_output`のデフォルト値は`auto`です。autoはテンプレートで指定した出力フォーマットに従います。ソースの該当箇所を見つけられませんでしたがおそらくclassicテンプレートで出力フォーマットにSVGを指定しています。
+:::
+
+https://github.com/lowlighter/metrics/blob/master/source/plugins/core/README.md#config_output
+
 # GitHub Actionsの設定
 Action codeをリポジトリの以下の場所に保存します。
 

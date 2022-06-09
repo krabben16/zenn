@@ -11,9 +11,8 @@ published: false # 公開設定（falseにすると下書き）
 
 https://github.com/lowlighter/metrics
 
-セットアップの方法はいくつかありますが、今回はGitHub Actionsを使う方法を試してみます。
-
-https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
+セットアップの方法はいくつかありますが、今回は[GitHub Actionsを使う方法](
+https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md)を試してみます。
 
 # リポジトリの作成
 アカウント名と同じpublicリポジトリを作成します。

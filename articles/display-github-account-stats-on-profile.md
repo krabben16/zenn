@@ -68,7 +68,7 @@ jobs:
 ```
 
 :::message
-出力フォーマットを指定するオプション`config_output`を設定しなかった場合のデフォルト値は`auto`です。autoはテンプレートで指定した出力フォーマットに従います。ソースの該当箇所を見つけられませんでしたがおそらくclassicテンプレートの出力フォーマットでSVGを指定しているのだと思います。
+出力フォーマットを指定するオプション`config_output`を設定しなかった場合のデフォルト値は`auto`です。autoはテンプレートで指定した出力フォーマットに従います。ソースの該当箇所を見つけられませんでしたが、おそらくclassicテンプレートの出力フォーマットでSVGを指定しているのだと思います。
 :::
 
 https://github.com/lowlighter/metrics/blob/master/source/plugins/core/README.md#config_output

@@ -96,7 +96,7 @@ https://github.com/krabben16/krabben16/blob/master/README.md
 # 画像の表示確認
 GitHubアカウントのOverviewを表示した時に画像が表示されていれば完成です！
 
-![](https://storage.googleapis.com/zenn-user-upload/557446a90ad1-20220609.png)
+![](https://storage.googleapis.com/zenn-user-upload/96b8c02a8e3c-20220609.png)
 
 # おわりに
 お気に入りはMost used languagesです。その他にも統計情報を視覚的に表示するプラグインがいろいろ用意されているので、プロフィールの見せ方のバリエーションが広がりますね🧐

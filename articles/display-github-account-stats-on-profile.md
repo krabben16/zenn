@@ -84,17 +84,17 @@ secretsは暗号化された環境変数のことです。生成したPersonal A
 ![](https://storage.googleapis.com/zenn-user-upload/f8c7dc7a4868-20220609.png)
 
 ## ワークフローの動作確認
-設定が問題なければGitHub Actionsが正常に動作してリポジトリに`github-metrics.svg`というファイルがコミットされていると思います。svgを生成するワークフローはyamlの`schedule`で設定した通り1時間に1回実行されます。
+設定が問題なければGitHub Actionsが正常に動作してリポジトリに`github-metrics.svg`というファイルがコミットされています。画像を生成するワークフローはyamlの`schedule`で設定した通り1時間に1回実行されます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/e851a111f463-20220609.png)
 
 # README.mdの作成
-生成したsvgを読み込むマークダウンファイルを作成します。
+生成した画像を読み込むマークダウンファイルを作成します。
 
 https://github.com/krabben16/krabben16/blob/master/README.md
 
-# 完成
-GitHubアカウントのOverviewを表示した時にsvgが表示されていれば完了です！
+# 画像の表示確認
+GitHubアカウントのOverviewを表示した時に画像が表示されていれば完成です！
 
 ![](https://storage.googleapis.com/zenn-user-upload/557446a90ad1-20220609.png)
 

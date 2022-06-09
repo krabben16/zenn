@@ -2,7 +2,7 @@
 title: "GitHubアカウントの統計情報を定期的に取得してプロフィールに表示する" # 記事のタイトル
 emoji: "🔍" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["github", "githubactions"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["github", "githubactions", "ci", "markdown"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 ---
 

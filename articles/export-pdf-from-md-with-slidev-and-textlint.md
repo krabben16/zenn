@@ -65,7 +65,7 @@ $ slidev --open
   shortcuts           > restart | open | edit
 ```
 
-![](https://storage.googleapis.com/zenn-user-upload/cab74e9b09c3-20220611.png)
+![](https://storage.googleapis.com/zenn-user-upload/22b5d098ee34-20220611.png)
 
 `slides.md`以外のプレビューを確認したい場合は引数を追加します。
 

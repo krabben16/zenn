@@ -102,6 +102,12 @@ $ slidev export slides.md --output output.pdf
 
 https://ja.sli.dev/guide/exporting.html
 
+# Slidevの実装
+## Markdownシンタックス
+[Markdownの機能](https://ja.sli.dev/guide/syntax.html#:~:text=%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82-,Markdown%E3%81%AE%E6%A9%9F%E8%83%BD,-%E3%81%AF%E9%80%9A%E5%B8%B8%E9%80%9A%E3%82%8A)に加えて、インラインHTMLとVueコンポーネントがサポートされています。
+
+https://ja.sli.dev/guide/syntax.html
+
 ## テーマの変更
 Slidevにはテーマファイルの仕組みがあります。マークダウンのFrontmatterに設定するだけで簡単に導入できます。
 

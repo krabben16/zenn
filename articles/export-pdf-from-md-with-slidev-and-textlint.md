@@ -1,6 +1,6 @@
 ---
 title: "Slidev+textlintで校正したマークダウンをPDF形式のスライドに変換する" # 記事のタイトル
-emoji: "🧙‍♂️" # アイキャッチとして使われる絵文字（1文字だけ）
+emoji: "👮" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["slidev", "vue", "vite", "markdown", "textlint", "githubactions"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）

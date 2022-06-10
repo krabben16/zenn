@@ -22,9 +22,9 @@ https://zenn.dev/ryo_kawamata/articles/introduce-slidev
 
 # なにする？
 1. SlidevでマークダウンをPDFに変換します。
-  - PDFの変換はCIではなくローカル環境でコマンドを実行する
+    - PDFの変換はCIではなくローカル環境でコマンドを実行する
 2. PR作成時/追加修正時にtextlintでマークダウンの文章を校正します。
-  - 校正した結果をPRのコメントとして投稿する
+    - 校正した結果をPRのコメントとして投稿する
 
 # Slidevの設定
 ## インストール
@@ -202,6 +202,8 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 ```
 
 # GitHub Actionsの設定
+textlintの実行を自動化します。PRの作成時とブランチの更新時にtextlintを実行するように設定します。
+
 ## 設定ファイルの作成
 以下のパスにファイルを作成します。
 

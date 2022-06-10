@@ -1,5 +1,5 @@
 ---
-title: "Slidev+textlintで校正したマークダウンからPDF形式のスライドを作成する" # 記事のタイトル
+title: "Slidev+textlintで校正したマークダウンをPDF形式のスライドに変換する" # 記事のタイトル
 emoji: "📝" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["slidev", "vue", "vite", "markdown", "textlint", "githubactions"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -18,7 +18,7 @@ https://zenn.dev/ryo_kawamata/articles/introduce-slidev
 
 > reveal.jsやremarkなどのマークダウン形式でのスライド作成ツールとほぼ同様の記法で、スライドを作成できます。大抵のツールでは、ある程度決まったレイアウトになるのですが、Slidev の場合は拡張性がかなり高いです。Vue Component や、WindiCSS でスタイリングすることでページごとに独自のスタイルを当てて自由なレイアウトで構築することも出来きます。
 
-…マークダウン形式でスライドを作成できます。哀愁を帯びたスライド作成作業に光明が差しました。Slidevが作成するスライドはこういう感じです。
+…マークダウン形式でスライドを作成できます。哀愁を帯びたスライド作成作業に光明が差しました。Slidevで作成できるスライドはこういう感じです。
 
 @[slideshare](39hJ8UIEf2fYVh)
 

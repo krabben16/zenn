@@ -205,39 +205,44 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 # GitHub Actionsの設定
 ## 設定ファイルの作成
-textlintの実行を自動化します。PRの作成時とブランチの更新時にtextlintを実行するように設定します。以下のパスにファイルを作成します。
+textlintの実行を自動化します。PRの作成時とブランチの同期時にtextlintを実行するように設定します。以下のパスにファイルを作成します。
 
 ```yml
 name: run-textlint-minimum
 on: 
   pull_request_target:
-    types: [ opened, synchronize ]
-    paths: [ '*.md' ]
+    types: [ opened, synchronize ] # PRの作成 or ブランチの同期がトリガー
+    paths: [ '*.md' ] # 全てのmdファイルの追加/更新がトリガー
 jobs:
   run-textlint-minimum:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
+      pull-requests: write # "gh pr comment"を実行するための権限を付与
     steps:
+      # レビューを行う作業ブランチに切り替え
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+      # Node.js環境をセットアップ
       - uses: actions/setup-node@v3
         with:
           node-version: 14
       - run: npm install
+      # textlintを実行。実行ログをログファイルに保存。
       - run: npx textlint *.md >> ./.textlint.log
-      - if: ${{ failure() }}
+      - if: ${{ failure() }} # 「失敗したときのみ実行する」条件
         run: gh pr comment --body-file ./.textlint.log "${URL}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           URL: ${{ github.event.pull_request.html_url }}
 ```
 
+こちらのサンプルファイルを参考にさせていただきました。
+
 https://dev.classmethod.jp/articles/markdown-writing-with-textlint-ci/
 
 ## PRでtextlintの実行結果が通知されることの確認
-こういう感じでPRの作成時、およびブランチの更新時にtextlintが実行されます。どのファイルがどのルールに違反したのかも通知してくれます。（`Update test.md`のコミットでら抜き言葉を修正しました。）
+こういう感じでPRの作成時、およびブランチの同期時にtextlintが実行されます。どのファイルがどのルールに違反したのかも通知してくれます。`Update test.md`のコミットでら抜き言葉を修正したことでtextlintの実行結果が変化しています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c794d16fbbad-20220611.png)
 

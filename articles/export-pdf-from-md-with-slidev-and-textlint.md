@@ -204,10 +204,8 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 ```
 
 # GitHub Actionsの設定
-textlintの実行を自動化します。PRの作成時とブランチの更新時にtextlintを実行するように設定します。
-
 ## 設定ファイルの作成
-以下のパスにファイルを作成します。
+textlintの実行を自動化します。PRの作成時とブランチの更新時にtextlintを実行するように設定します。以下のパスにファイルを作成します。
 
 ```yml
 name: run-textlint-minimum

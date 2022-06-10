@@ -257,7 +257,7 @@ jobs:
 https://dev.classmethod.jp/articles/markdown-writing-with-textlint-ci/
 
 ## PRにtextlintの実行結果が通知されることの確認
-PRの作成時、およびブランチの同期時にtextlintが実行されます。どのファイルがどのルールに違反したのかも通知してくれます。`Update test.md`のコミットでら抜き言葉を修正したことでtextlintの実行結果が変化しています。
+PRの作成時、およびブランチの同期時にtextlintが実行されます。どのファイルがどのルールに違反したのか通知してくれます。`Update test.md`のコミットでら抜き言葉を修正したことでtextlintの実行結果が変化しています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c794d16fbbad-20220611.png)
 

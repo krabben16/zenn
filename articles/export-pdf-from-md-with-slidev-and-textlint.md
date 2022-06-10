@@ -3,7 +3,7 @@ title: "Slidev+textlintで校正したマークダウンをPDF形式のスライ
 emoji: "🫰" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["slidev", "vue", "vite", "markdown", "textlint", "githubactions"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
 # はじめに
@@ -256,8 +256,8 @@ jobs:
 
 https://dev.classmethod.jp/articles/markdown-writing-with-textlint-ci/
 
-## PRでtextlintの実行結果が通知されることの確認
-こういう感じでPRの作成時、およびブランチの同期時にtextlintが実行されます。どのファイルがどのルールに違反したのかも通知してくれます。`Update test.md`のコミットでら抜き言葉を修正したことでtextlintの実行結果が変化しています。
+## PRにtextlintの実行結果が通知されることの確認
+PRの作成時、およびブランチの同期時にtextlintが実行されます。どのファイルがどのルールに違反したのかも通知してくれます。`Update test.md`のコミットでら抜き言葉を修正したことでtextlintの実行結果が変化しています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c794d16fbbad-20220611.png)
 

@@ -104,7 +104,20 @@ https://ja.sli.dev/guide/exporting.html
 
 # Slidevの実装
 ## Markdownシンタックス
-[Markdownの機能](https://ja.sli.dev/guide/syntax.html#:~:text=%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82-,Markdown%E3%81%AE%E6%A9%9F%E8%83%BD,-%E3%81%AF%E9%80%9A%E5%B8%B8%E9%80%9A%E3%82%8A)に加えて、インラインHTMLとVueコンポーネントがサポートされています。
+[Markdownの機能](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)に加えて、インラインHTMLとVueコンポーネントがサポートされています。
+
+~~~md
+<!-- インラインHTML -->
+<div>
+
+<!-- Markdownの機能 (コードブロッック) -->
+```html
+<Counter :count="10" />
+```
+
+<!-- Vueコンポーネント -->
+<Counter :count="10" />
+~~~
 
 https://ja.sli.dev/guide/syntax.html
 

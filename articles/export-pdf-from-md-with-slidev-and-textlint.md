@@ -116,11 +116,11 @@ Slidevにはテーマファイルの仕組みがあります。マークダウ�
 theme: bricks
 ```
 
-![](https://storage.googleapis.com/zenn-user-upload/bc2480390268-20220611.png)
-
 テーマファイルの一覧
 
 https://ja.sli.dev/themes/gallery.html
+
+![](https://storage.googleapis.com/zenn-user-upload/bc2480390268-20220611.png)
 
 ## 環境変数の参照
 いろいろ試している時にたまたま見つけて、需要があるのか微妙ですが書いておきます。

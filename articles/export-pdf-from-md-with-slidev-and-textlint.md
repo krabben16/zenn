@@ -107,13 +107,13 @@ https://ja.sli.dev/guide/exporting.html
 [Markdownの機能](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)に加えて、インラインHTMLとVueコンポーネントがサポートされています。
 
 ~~~md
-<!-- インラインHTML -->
-<div>
-
 <!-- Markdownの機能 (コードブロッック) -->
 ```html
 <Counter :count="10" />
 ```
+
+<!-- インラインHTML -->
+<div></div>
 
 <!-- Vueコンポーネント -->
 <Counter :count="10" />

@@ -45,10 +45,6 @@ GitHubをターミナルやスクリプトから操作するためのCLIです�
 |gh ssh-key|GitHubアカウントに登録されているSSHキーを管理する|
 |gh status|サブスクライブしているすべてのリポジトリにわたって、GitHubでの作業に関する情報を出力する|
 
-**Options**
-
-`--version` ghバージョンを表示
-
 https://cli.github.com/manual/gh
 
 # 検証環境

@@ -61,7 +61,7 @@ $ brew install gh
 https://github.com/cli/cli#macos
 
 # 構成
-CLIとGitHubアカウントの認証を行います。以下のコマンドを実行します。
+CLIの認証を行います。以下のコマンドを実行します。
 
 
 ```sh

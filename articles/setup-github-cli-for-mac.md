@@ -119,11 +119,12 @@ JSONに出力するフィールドを指定します。
 - リポジトリ名
 - リポジトリ内で最も使われている言語
 - リポジトリ内で使われている全ての言語とそのサイズ
+- 所有者
 - 作成日時
 - 更新日時
 
 ```sh
-$ gh repo list krabben16 --language typescript --json name,primaryLanguage,languages,createdAt,updatedAt
+$ gh repo list krabben16 --language typescript --json name,primaryLanguage,languages,owner,createdAt,updatedAt
 ```
 
 ```json
@@ -145,6 +146,10 @@ $ gh repo list krabben16 --language typescript --json name,primaryLanguage,langu
       }
     ],
     "name": "sandbox-cdk-ts",
+    "owner": {
+      "id": "MDQ6VXNlcjU3NTM0Mzc0",
+      "login": "krabben16"
+    },
     "primaryLanguage": {
       "name": "TypeScript"
     },

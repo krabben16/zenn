@@ -1,5 +1,5 @@
 ---
-title: "CDK+TSのサンプルLambda-Cronを実行する" # 記事のタイトル
+title: "CDK+TypeScriptのサンプルLambda-Cronを実行する" # 記事のタイトル
 emoji: "🥾" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["awscdk", "cloudformation", "aws", "lambda", "eventbridge", "cron", "typescript", "jest"] # タグ。["markdown", "rust", "aws"]のように指定する

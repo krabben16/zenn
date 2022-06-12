@@ -91,11 +91,13 @@ $ gh auth login
 Press Enter to open github.com in your browser...
 ```
 
-Enterを押すとブラウザでGitHubのDevice Activationページが表示されます。提示されたone-time code(`XXXX-XXXX`の部分)をDevice Activationページのフォームに入力します。
+Enterを押すとブラウザでGitHubのDevice Activationページが表示されます。提示されたone-time code(`XXXX-XXXX`の部分)をDevice Activationページのフォームに入力してContinueをクリックします。
 
 ![](https://storage.googleapis.com/zenn-user-upload/b77364ba9fb4-20220612.png)
 
+CLIが要求するアクセス権限のリストが表示されます。問題なければAuthorize gitHubをクリックします。
 
+![](https://storage.googleapis.com/zenn-user-upload/87a6ba2e8e90-20220612.png)
 
 認証が完了しました。ターミナルに完了メッセージが表示されます。
 

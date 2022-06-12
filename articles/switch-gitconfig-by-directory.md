@@ -1,11 +1,3 @@
----
-title: "gitのconfigをディレクトリ単位で設定する" # 記事のタイトル
-emoji: "📁" # アイキャッチとして使われる絵文字（1文字だけ）
-type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["git"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
----
-
 # なにする
 gitの設定の構成レベルは以下に分かれています。
 
@@ -25,22 +17,22 @@ globalの.gitconfigを編集します。特定のディレクトリで指定し�
 ```~/.gitconfig
 [user]
     name = default
-[includeIf "gitdir:~/a/"]
-  	path = ~/.gitconfig-a
+[includeIf "gitdir:~/organization-a/"]
+  	path = ~/.gitconfig-organization-a
 ```
 
-~/.gitconfig-aを作成します。
+`~/.gitconfig-organization-a`を作成します。
 
-```~/.gitconfig-a
+```~/.gitconfig-organization-a
 [user]
     name = user-a
 ```
 
 # 動作確認
-特定のディレクトリに移動してuser.nameの値を確認してみます。`~/.gitconfig-a`に設定したディレクトリ単位の値が適用されています。
+特定のディレクトリに移動してuser.nameの値を確認してみます。`~/.gitconfig-organization-a`に設定したディレクトリ単位の値が適用されています。
 
 ```sh
-$ mkdir -p ~/a/repo && cd ~/a/repo && git init
+$ mkdir -p ~/organization-a/repo && cd ~/organization-a/repo && git init
 $ git config user.name
 user-a
 ```
@@ -48,7 +40,7 @@ user-a
 次に別のディレクトリに移動してuser.nameの値を確認してみます。`~/.gitconfig`に設定したユーザー単位の値が適用されています。
 
 ```sh
-$ mkdir -p ~/b/repo && cd ~/b/repo && git init
+$ mkdir -p ~/organization-b/repo && cd ~/organization-b/repo && git init
 $ git config user.name
 default
 ```

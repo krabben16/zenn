@@ -22,7 +22,7 @@ https://www.atlassian.com/ja/git/tutorials/setting-up-a-repository/git-config
 # 対応方法
 ユーザー単位の`.gitconfig`を編集して特定のディレクトリにいるときにディレクトリ単位の`.gitconfig`を読み込むようにします。この例では`~/organization-a/`にいるとき`~/.gitconfig-organization-a`を読み込みます。
 
-```~/.gitconfig
+```config:~/.gitconfig
 [user]
     name = default
 [includeIf "gitdir:~/organization-a/"]
@@ -31,7 +31,7 @@ https://www.atlassian.com/ja/git/tutorials/setting-up-a-repository/git-config
 
 `~/.gitconfig-organization-a`を作成します。
 
-```~/.gitconfig-organization-a
+```config:~/.gitconfig-organization-a
 [user]
     name = user-a
 ```

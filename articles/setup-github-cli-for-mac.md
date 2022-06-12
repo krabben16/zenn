@@ -7,7 +7,7 @@ published: false # 公開設定（falseにすると下書き）
 ---
 
 # GitHub CLIとは
-ターミナルやスクリプトからGitHubを操作するためのCLIです。色々できます。
+GitHubをターミナルやスクリプトから操作するためのCLIです。色々できます。
 
 **Core commands**
 

@@ -124,7 +124,7 @@ JSONに出力するフィールドを指定します。
 - 更新日時
 
 ```sh
-$ gh repo list krabben16 --language typescript --json name,primaryLanguage,languages,owner,createdAt,updatedAt
+$ gh repo list --language typescript --json name,primaryLanguage,languages,owner,createdAt,updatedAt
 ```
 
 ```json

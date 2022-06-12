@@ -116,12 +116,12 @@ https://cli.github.com/manual/
 
 JSONに出力するフィールドを指定します。
 
-- リポジトリ名
-- リポジトリ内で最も使われている言語
-- リポジトリ内で使われている全ての言語とそのサイズ
-- 所有者
-- 作成日時
-- 更新日時
+- リポジトリ名 (`name`)
+- リポジトリ内で最も使われている言語 (`primaryLanguage`)
+- リポジトリ内で使われている全ての言語とそのサイズ (`languages`)
+- 所有者 (`owner`)
+- 作成日時 (`createdAt`)
+- 更新日時 (`updatedAt`)
 
 ```sh
 $ gh repo list --language typescript --json name,primaryLanguage,languages,owner,createdAt,updatedAt

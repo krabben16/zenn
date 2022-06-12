@@ -95,7 +95,7 @@ CLIが要求するアクセス権限のリストが表示されます。問題�
 
 ![](https://storage.googleapis.com/zenn-user-upload/87a6ba2e8e90-20220612.png)
 
-認証が完了しました。また、ターミナルに完了メッセージが表示されます。
+認証が完了しました。ターミナルに完了メッセージが表示されます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c0244526781d-20220612.png)
 

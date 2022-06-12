@@ -45,7 +45,7 @@ $ git config user.name
 user-a
 ```
 
-次に別のディレクトリに移動してuser.nameの値を確認してみます。`~/.gitconfig`に設定したユーザー単位の値が適用されています。
+次に`~/organization-b/`に移動してuser.nameの値を確認してみます。`~/.gitconfig`に設定したユーザー単位の値が適用されています。
 
 ```sh
 $ mkdir -p ~/organization-b/repo && cd ~/organization-b/repo && git init

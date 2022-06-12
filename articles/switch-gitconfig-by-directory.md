@@ -11,7 +11,7 @@ gitの設定の構成レベルは以下に分かれています。
 
 - `--local`: リポジトリ単位
 - `--global`: ユーザー単位
-- `-system`: システム単位
+- `--system`: システム単位
 
 https://www.atlassian.com/ja/git/tutorials/setting-up-a-repository/git-config
 

@@ -112,3 +112,48 @@ Press Enter to open github.com in your browser...
 ```
 
 https://cli.github.com/manual/
+
+# 動作確認
+以下の条件でリポジトリの一覧を取得してJSONに整形してみます。
+
+- リポジトリ内で最も使われている言語がTypeScript
+
+JSONに出力するフィールドを指定します。
+
+- リポジトリ名
+- リポジトリ内で最も使われている言語
+- リポジトリ内で使われている全ての言語とそのサイズ
+- 作成日時
+- 更新日時
+
+```sh
+$ gh repo list krabben16 --language typescript --json name,primaryLanguage,languages,createdAt,updatedAt
+```
+
+```json
+[
+  {
+    "createdAt": "2022-06-03T14:21:00Z",
+    "languages": [
+      {
+        "size": 1110,
+        "node": {
+          "name": "JavaScript"
+        }
+      },
+      {
+        "size": 1271,
+        "node": {
+          "name": "TypeScript"
+        }
+      }
+    ],
+    "name": "sandbox-cdk-ts",
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "updatedAt": "2022-06-11T16:40:44Z"
+  },
+```
+
+取得できました👏

@@ -1,14 +1,55 @@
 ---
-title: "MacにGitHub CLIをセットアップする" # 記事のタイトル
+title: "MacでGitHub CLIをセットアップする" # 記事のタイトル
 emoji: "🐙" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["m1", "macos", "git", "github"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: false # 公開設定（falseにすると下書き）
 ---
 
-# はじめに
-**GitHub CLIとは？**
-リポジトリ、PR、Issueなどの情報を取得したり更新したりできるツールです。かなり色々できます。
+# GitHub CLIとは
+ターミナルやスクリプトからGitHubを操作するためのCLIです。色々できます。
+
+**Core commands**
+
+|コマンド|説明|
+|---|---|
+|gh auth|GitHubでghとgitを認証する|
+|gh browse|WebブラウザでGitHubリポジトリを開く|
+|gh codespace|Codespaceに接続して管理する|
+|gh gist|gistsを操作する|
+|gh issue|イシューを操作する|
+|gh pr|PRを操作する|
+|gh release|リリースを管理する|
+|gh repo|リポジトリを操作する|
+
+**Actions commands**
+
+|コマンド|説明|
+|---|---|
+|gh run|GitHub Actionsから実行された最近のワークフローを一覧表示、表示、および監視する|
+|gh workflow|GitHub Actionsでワークフローを一覧表示、表示、実行する|
+
+**Additional commands**
+
+|コマンド|説明|
+|---|---|
+|gh alias|エイリアスを使用して、ghコマンドのショートカットを作成したり、複数のコマンドを作成したり|
+|gh api|GitHub APIに対して認証済みのHTTPリクエストを作成し、レスポンスを出力する|
+|gh completion|GitHubCLIコマンドのshell completion scriptsを生成する|
+|gh config|ghの構成設定を表示または変更する|
+|gh extension|拡張機能を追加する|
+|gh gpg-key|GitHubアカウントに登録されているGPGキーを管理する|
+|gh label|ラベルを操作する|
+|gh search|GitHub全体を検索する|
+|gh secret|secretをリポジトリまたは組織レベルで設定する|
+|gh ssh-key|GitHubアカウントに登録されているSSHキーを管理する|
+|gh status|サブスクライブしているすべてのリポジトリにわたって、GitHubでの作業に関する情報を出力する|
+
+**Options**
+
+`--version` ghバージョンを表示
+
+https://cli.github.com/manual/gh
 
 # 検証環境
 - M1 MBP@12.4
@@ -24,14 +65,14 @@ $ brew install gh
 https://github.com/cli/cli#macos
 
 # 構成
-CLIと自分のGitHubアカウントを紐づける認証を行います。以下のコマンドを実行します。
+CLIとGitHubアカウントの認証を行います。以下のコマンドを実行します。
 
 
 ```sh
 $ gh auth login
 ```
 
-プロンプトが表示されるので回答していきます。
+いくつか質問されるので回答していきます。
 
 ```
 ? What account do you want to log into?  [Use arrows to move, type to filter]
@@ -56,11 +97,12 @@ Enterを押すとブラウザでGitHubのDevice Activationページが表示さ�
 
 
 
-認証が完了しました。プロンプトにも完了メッセージが表示されています。
+認証が完了しました。ターミナルに完了メッセージが表示されます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c0244526781d-20220612.png)
 
 ```
+Press Enter to open github.com in your browser...
 ✓ Authentication complete.
 - gh config set -h github.com git_protocol https
 ✓ Configured git protocol

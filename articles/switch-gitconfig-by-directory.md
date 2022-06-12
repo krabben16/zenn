@@ -20,7 +20,7 @@ https://www.atlassian.com/ja/git/tutorials/setting-up-a-repository/git-config
 これらの課題を解決するためディレクトリ単位でconfigを設定できるようにします。
 
 # 対応方法
-globalの.gitconfigを編集します。特定のディレクトリで指定した.gitconfigを読み込みます。この例では`~/a/`以下のリポジトリで`~/.gitconfig-a`を読み込むという意味です。
+ユーザー単位の`.gitconfig`を編集して特定のディレクトリにいるときにディレクトリ単位の`.gitconfig`を読み込むようにします。この例では`~/organization-a/`にいるとき`~/.gitconfig-organization-a`を読み込みます。
 
 ```~/.gitconfig
 [user]
@@ -37,7 +37,7 @@ globalの.gitconfigを編集します。特定のディレクトリで指定し�
 ```
 
 # 動作確認
-特定のディレクトリに移動してuser.nameの値を確認してみます。`~/.gitconfig-organization-a`に設定したディレクトリ単位の値が適用されています。
+`~/organization-a/`に移動してuser.nameの値を確認してみます。`~/.gitconfig-organization-a`に設定したディレクトリ単位の値が適用されています。
 
 ```sh
 $ mkdir -p ~/organization-a/repo && cd ~/organization-a/repo && git init
@@ -53,4 +53,4 @@ $ git config user.name
 default
 ```
 
-ディレクトリ単位で異なる値を設定できるようになりました🎉
+ディレクトリ単位でconfigを設定できるようになりました🎉

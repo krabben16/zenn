@@ -28,7 +28,7 @@ https://zenn.dev/bun913/articles/work-mail-practice
 | 項目 | 値 |
 | --- | --- |
 | プロトコル | IMAP  |
-| ホスト名 | `imap.mail.<WorkMailでアカウントを作成したリージョン>.awsapps.com` |
+| ホスト名 | imap.mail.<WorkMailでアカウントを作成したリージョン>.awsapps.com |
 | ポート番号 | 993 |
 | 接続の保護 | SSL/TLS |
 | 認証方式 | 通常のパスワード認証 |
@@ -38,7 +38,7 @@ https://zenn.dev/bun913/articles/work-mail-practice
 
 | 項目 | 値 |
 | --- | --- |
-| ホスト名 | `smtp.mail.<WorkMailでアカウントを作成したリージョン>.awsapps.com` |
+| ホスト名 | smtp.mail.<WorkMailでアカウントを作成したリージョン>.awsapps.com |
 | ポート番号 | 465 |
 | 接続の保護 | 自動検出 |
 | 認証方式 | 自動検出 |

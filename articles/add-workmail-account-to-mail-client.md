@@ -23,8 +23,6 @@ https://zenn.dev/bun913/articles/work-mail-practice
 次に手動設定をクリックします。受信サーバーにAWSのIMAPサーバー、送信サーバーにAWSのSMTPサーバーを設定します。`ホスト名`はWorkMailでアカウントを作成したリージョンを指定します。（例. us-east-1）
 `ユーザー名`は（ややこしいですが）WorkMailで作成したアカウントのメールアドレスを入力します。
 
-![](https://gyazo.com/063777fcbfe91d6b44ae5e102a3e9caf.png)
-
 **受信サーバー**
 
 | 項目 | 値 |
@@ -45,6 +43,17 @@ https://zenn.dev/bun913/articles/work-mail-practice
 | 接続の保護 | 自動検出 |
 | 認証方式 | 自動検出 |
 | ユーザー名 | <WorkMailで作成したアカウントのメールアドレス> |
+
+![](https://gyazo.com/063777fcbfe91d6b44ae5e102a3e9caf.png)
+
+## 接続確認
+画面下部の`再テスト`ボタンをクリックします。
+
+![](https://gyazo.com/d324fd6dba59d4f1f1fc1b0043dffeb2.png)
+
+設定が問題なければ以下のような成功メッセージが表示されるので`完了`ボタンをクリックして終了です。
+
+![](https://gyazo.com/49748e64ad0a21182c085eeecb64f320.png)
 
 # おわりに
 受信/送信サーバーの接続情報が分からなくて時間を浪費しました。ドキュメントにしっかり書いてありました🤷

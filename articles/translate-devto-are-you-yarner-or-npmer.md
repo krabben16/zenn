@@ -13,10 +13,7 @@ dev.toに投稿された記事の翻訳です。（2022/06/15時点）
 
 https://dev.to/charliesay/are-you-a-yarner-or-a-npmer-337j
 
-自分はパッケージのインストールが早いイメージのあるYarnを使っていました。pnpmやniという選択肢もあるのですね🤔
-主なパッケージマネージャーの特徴は以下の記事にまとめられています。
-
-https://zenn.dev/hibikine/articles/27621a7f95e761
+自分はパッケージのインストールが早いイメージのあるYarnを使っていました。pnpmもインストールが速そうですね🤔
 
 # Yarn派
 
@@ -106,3 +103,9 @@ https://deno-ja.vercel.app/artwork
 DenoでNPMパッケージを使う方法があるそうです。
 https://zenn.dev/uki00a/articles/how-to-use-npm-packages-in-deno
 :::
+
+# 参考
+
+主なパッケージマネージャーの特徴は以下の記事が詳しいです。
+
+https://zenn.dev/hibikine/articles/27621a7f95e761

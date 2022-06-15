@@ -110,8 +110,10 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 # 余談
 
-pnpmって何と読むのが正しいんですかね。
-ドキュメントに発音の記載が見つからず…。
-ピーエヌピーエムと発音されている方はいました🤔
+- pnpmって何と読むのが正しいんですかね。
+    - ドキュメントに発音の記載が見つからず
+    - `performant npm`の略らしいです
+        - https://pnpm.io/ja/faq#pnpm-%E3%81%AF%E4%BD%95%E3%81%AE%E7%95%A5%E3%81%A7%E3%81%99%E3%81%8B
+- ピーエヌピーエムと発音されている方を見つけました🤔
 
 https://www.youtube.com/watch?v=hiTmX2dW84E&t=10s

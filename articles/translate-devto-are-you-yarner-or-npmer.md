@@ -1,5 +1,5 @@
 ---
-title: "[dev.to翻訳]あなたはYARNerまたはNPMerですか？" # 記事のタイトル
+title: "[翻訳]dev.to あなたはYARNerまたはNPMerですか？" # 記事のタイトル
 emoji: "😺" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "idea" # tech: 技術記事 / idea: アイデア記事
 topics: ["devto", "npm", "yarn", "pnpm", "ni"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -14,7 +14,7 @@ dev.toに投稿された記事の翻訳です。（2022/06/15時点）
 https://dev.to/charliesay/are-you-a-yarner-or-a-npmer-337j
 
 自分はパッケージのインストールが早いイメージのあるYarnを使っていました。pnpmやniという選択肢もあるのですね🤔
-各パッケージマネージャーの特徴は以下の記事にまとめられています。
+主なパッケージマネージャーの特徴は以下の記事にまとめられています。
 
 https://zenn.dev/hibikine/articles/27621a7f95e761
 
@@ -24,11 +24,21 @@ https://zenn.dev/hibikine/articles/27621a7f95e761
 
 個人的にはYarnが好きです。パッケージのインストールが速いし、ピア依存の解決で時間をたくさん節約できるのが本当にありがたいです。
 
+> Between NPM and Yarn I prefer Yarn for having more intuitive commands in my opinion. Nowadays I don't think there are any big differences in performance between the two anymore, I think yarn should still win because of the cache. Because if it's a clean install, they're very close.
+> I've been using pnpm lately and I've found it super interesting and I've been loving it.
+
+NPMとYarnの間ではより直感的なコマンドを使用できるYarnの方が好きです。最近では2つのパフォーマンスに大きな違いはないと思います。キャッシュがあるためyarnはまだ勝つはずです。クリーンインストールの場合、それらは非常に近いからです。
+私は最近pnpmを使用していてとても面白くて気に入っています。
+
 > yarn
 > Because the pronunciation is a bit similar to my first name. 😁😁😁
 
 yarnです。
 発音が私のファーストネームに少し似ているので😁😁😁
+
+> yarn ui is more beautiful than npm
+
+yarnのUIはnpmより美しいです。
 
 # NPM派
 
@@ -90,7 +100,6 @@ yarn、npm、pnpmを使ったプロジェクトがたくさんありすぎて、
 :::message
 画像の出典はおそらくここです。
 https://deno-ja.vercel.app/artwork
-
 DenoでNPMパッケージを使う方法があるそうです。
 https://zenn.dev/uki00a/articles/how-to-use-npm-packages-in-deno
 :::

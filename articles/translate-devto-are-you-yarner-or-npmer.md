@@ -107,3 +107,11 @@ https://zenn.dev/uki00a/articles/how-to-use-npm-packages-in-deno
 主なパッケージマネージャーの特徴は以下の記事が詳しいです。
 
 https://zenn.dev/hibikine/articles/27621a7f95e761
+
+# 余談
+
+pnpmって何と読むのが正しいんですかね。
+ドキュメントに発音の記載が見つからず…。
+ピーエヌピーエムと発音されている方はいました🤔
+
+https://www.youtube.com/watch?v=hiTmX2dW84E&t=10s

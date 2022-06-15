@@ -95,7 +95,8 @@ yarn、npm、pnpmを使ったプロジェクトがたくさんありすぎて、
 
 ジュラ紀の時代が好きです。
 
-![](https://storage.googleapis.com/zenn-user-upload/42b047477472-20220615.jpeg)
+![](https://storage.googleapis.com/zenn-user-upload/42b047477472-20220615.jpeg =250x)
+*DENOLAND*
 
 :::message
 画像の出典はおそらくここです。

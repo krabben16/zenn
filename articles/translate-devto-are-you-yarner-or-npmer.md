@@ -87,7 +87,7 @@ npmの依存関係をダウンロードするのは私の地域では非常に�
 > I've so many projects with yarn, npm and pnpm that I always forget which project uses which. It is great to just run nr dev to turn on the dev server and start coding right away
 
 nierはどうですか？
-yarn、npm、pnpmを使ったプロジェクトがたくさんありすぎて、どのプロジェクトがどれを使っているかいつも忘れてしまいます。`nr dev`を実行するだけで開発サーバーが立ち上がり、すぐにコーディングが始められるのは素晴らしい。
+yarn、npm、pnpmを使うプロジェクトがたくさんあって、どのプロジェクトでどれを使っているかいつも忘れてしまいます。`nr dev`を実行するだけで開発サーバーが立ち上がり、すぐにコーディングを始められるのは素晴らしいです。
 
 https://github.com/antfu/ni
 

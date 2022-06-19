@@ -23,8 +23,7 @@ published: true # 公開設定（falseにすると下書き）
   - aws-cdk-lib@2.28.0
 
 # 事前準備
-Secrets Managerで `EcsAlbFargateServiceDDApiKey` という名前のシークレットを作成する必要があります。
-シークレットの値にはDatadogのAPIキーを設定します。暗号化キーはデフォルト？の`aws/secretsmanager`を設定しました。
+Secrets Managerで `EcsAlbFargateServiceDDApiKey` という名前のシークレットを作成する必要があります。シークレットの値にDatadogのAPIキーを設定します。
 
 # 実装
 サンプルコードはGitHubに配置しました。

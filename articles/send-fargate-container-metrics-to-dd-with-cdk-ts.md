@@ -19,6 +19,7 @@ published: true # 公開設定（falseにすると下書き）
 - yarn@1.22.19
 - npm packages
   - aws-cdk@2.28.0
+  - typescript@4.7.4
   - aws-cdk-lib@2.28.0
 
 # 事前準備

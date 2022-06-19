@@ -1,14 +1,14 @@
 ---
-title: "AWS ECS-Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK TypeScript" # 記事のタイトル
+title: "AWS ECS-Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK(TypeScript)" # 記事のタイトル
 emoji: "🐶" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["aws", "ecs", "fargate", "datadog", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
 # 概要
 - Datadog AgentコンテナをECSのタスクに追加し、同じタスクで起動している他のコンテナのメトリクスを収集してDatadogに送信します。
-- 上記の構成をCDK+TypeScriptで実装します。
+- 上記の構成をCDK(TypeScript)で実装します。
 
 ![](https://gyazo.com/721776b6dc6aa5bdc593325a85bab74d.png)
 *メトリクス収集のイメージ図*

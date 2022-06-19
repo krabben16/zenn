@@ -10,6 +10,11 @@ published: false # 公開設定（falseにすると下書き）
 - Datadog AgentコンテナをECSのタスクに追加し、同じタスクで起動している他のコンテナのメトリクスを収集してDatadogに送信します。
 - 上記の構成をCDK+TypeScriptで実装します。
 
+![](https://gyazo.com/721776b6dc6aa5bdc593325a85bab74d.png)
+*メトリクス収集のイメージ図*
+
+画像引用元 [ECS Fargate上のコンテナのメトリクスをDatadogへ送信する](https://eponas.gitlab.io/epona/guide/how_to/aws/send_ecs_fargate_metrics_to_datadog/)
+
 # 実行環境
 - yarn@1.22.19
 - npm packages
@@ -130,8 +135,7 @@ new ecsPatterns.ApplicationLoadBalancedFargateService(stack, 'EcsAlbFargateServi
 app.synth()
 ```
 
-#　実行確認
-
+# 実行確認
 ## CloudFormation
 EcsAlbFargateServiceStackというスタックが作成されています。「出力」タブでALBのDNS名が出力されています。
 

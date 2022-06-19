@@ -135,18 +135,18 @@ app.synth()
 ## CloudFormation
 EcsAlbFargateServiceStackというスタックが作成されています。「出力」タブでALBのDNS名が出力されています。
 
-![](https://gyazo.com/da02ce66db15c3b9d3380e345c700671)
+![](https://gyazo.com/da02ce66db15c3b9d3380e345c700671.png)
 
 アクセスするとWebコンテナで動作するApacheの初期表示と思われる画面が表示されます。
 
-![](https://gyazo.com/9595f773fb2d8d51a9e9650d409366ce)
+![](https://gyazo.com/9595f773fb2d8d51a9e9650d409366ce.png)
 
 https://ponsuke-tarou.hatenablog.com/entry/2018/12/19/233918
 
 ## Datadog
 Datadog > Infrastructure > Containersを表示します。ここでWebコンテナ、Datadogコンテナのメトリクスを確認できます🎉
 
-![](https://gyazo.com/a4c351ace7b3dffdecaca65891362840)
+![](https://gyazo.com/a4c351ace7b3dffdecaca65891362840.png)
 
 # 参考
 

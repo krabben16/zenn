@@ -120,7 +120,7 @@ const cluster = new ecs.Cluster(stack, 'Cluster', {
 // ALBが前面にあるECSクラスターで実行されるFargateサービスを構築
 // https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ecs_patterns.ApplicationLoadBalancedFargateService.html
 new ecsPatterns.ApplicationLoadBalancedFargateService(stack, 'EcsAlbFargateService', {
-  cluster, // サービスをホストするクラスターの名前
+  cluster, // サービスをホストするクラスター
   desiredCount: 1, // サービス上で実行し続けるタスク定義のインスタンス数の希望値
   taskDefinition: taskDef, // サービス内のタスクに使用するタスク定義
   taskSubnets: { // サービスに関連付けるサブネット

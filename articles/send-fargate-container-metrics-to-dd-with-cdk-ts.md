@@ -24,7 +24,7 @@ published: true # 公開設定（falseにすると下書き）
 
 # 事前準備
 Secrets Managerで `EcsAlbFargateServiceDDApiKey` という名前のシークレットを作成する必要があります。
-シークレットの値にはDatadogのAPIキーを設定します。
+シークレットの値にはDatadogのAPIキーを設定します。暗号化キーはデフォルト？の`aws/secretsmanager`を設定しました。
 
 # 実装
 サンプルコードはGitHubに配置しました。

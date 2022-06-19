@@ -1,5 +1,5 @@
 ---
-title: "AWS ECS on Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK(TypeScript)" # 記事のタイトル
+title: "ECS on Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK(TypeScript)" # 記事のタイトル
 emoji: "🐶" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["ecs", "fargate", "datadog", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する

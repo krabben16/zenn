@@ -21,7 +21,6 @@ Secrets Managerで `EcsAlbFargateServiceDDApiKey` という名前のシークレ
 シークレットの値にはDatadogのAPIキーを設定します。
 
 # 実装
-
 サンプルコードはGitHubに配置しました。
 
 https://github.com/krabben16/sandbox-cdk-ts-ecs-fargate-datadog
@@ -132,6 +131,7 @@ app.synth()
 ```
 
 #　実行確認
+
 ## CloudFormation
 EcsAlbFargateServiceStackというスタックが作成されています。「出力」タブでALBのDNS名が出力されています。
 

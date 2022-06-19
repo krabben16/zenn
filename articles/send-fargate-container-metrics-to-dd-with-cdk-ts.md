@@ -6,7 +6,7 @@ topics: ["ecs", "fargate", "datadog", "cdk", "typescript"] # タグ。["markdown
 published: true # 公開設定（falseにすると下書き）
 ---
 
-# 概要
+# やること
 - Datadog AgentコンテナをECSのタスクに追加し、同じタスクで起動している他のコンテナのメトリクスを収集してDatadogに送信します。
 - 上記の構成をCDK(TypeScript)で実装します。
 

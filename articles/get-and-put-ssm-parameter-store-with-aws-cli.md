@@ -2,7 +2,7 @@
 title: "AWS CLIを使ってSSMパラメータストアのパラメータを取得、作成する" # 記事のタイトル
 emoji: "💻" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["aws", "awscli", "ssm"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["aws", "awscli", "systemsmanager"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 ---
 

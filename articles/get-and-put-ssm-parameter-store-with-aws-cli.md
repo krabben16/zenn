@@ -25,7 +25,7 @@ aws ssm get-parameters-by-path --path "/" --recursive
 
 https://dev.classmethod.jp/articles/aws-cli-all-ssm-parameter-get/
 
-https://kakakakakku.hatenablog.com/entry/2017/06/10/181603
+https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ssm/get-parameters-by-path.html
 
 # 作成
 

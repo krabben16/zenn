@@ -12,14 +12,20 @@ AWSアカウントAのSystems Managerパラメータストアに作成したパ�
 # 取得
 
 ```
-aws ssm get-parameters-by-path --path "/"
+aws ssm get-parameters-by-path --path "/" --recursive
 ```
 
-パラメータ階層を指定してパラメータのリストを取得します。コマンドを実行するとJSONが返されるのでjqとかでよしなに加工します（省略）
+パラメータ階層`/`以下の全てのパラメータを取得します。コマンドを実行するとJSONが返されるのでjqとかでよしなに加工します（省略）
+
+:::message
+タイプがSecureStringのパラメータは暗号化された値が返されます。`--with-decryption`オプションを追加することで復号化された値を取得できます
+:::
 
 ## 参考
 
 https://dev.classmethod.jp/articles/aws-cli-all-ssm-parameter-get/
+
+https://kakakakakku.hatenablog.com/entry/2017/06/10/181603
 
 # 作成
 

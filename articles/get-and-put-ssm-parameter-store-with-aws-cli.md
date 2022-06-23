@@ -17,10 +17,6 @@ aws ssm get-parameters-by-path --path "/"
 
 パラメータ階層を指定してパラメータのリストを取得します。コマンドを実行するとJSONが返されるのでjqとかでよしなに加工します（省略）
 
-:::message
-パラメータタイプがSecureStringの場合には暗号化された値が返されます。復号化された値はAWSコンソールでしか確認できないと思います（多分）
-:::
-
 ## 参考
 
 https://dev.classmethod.jp/articles/aws-cli-all-ssm-parameter-get/

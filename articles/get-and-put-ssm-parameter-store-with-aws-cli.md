@@ -40,3 +40,6 @@ aws ssm put-parameter \
 https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/param-create-cli.html
 
 https://docs.aws.amazon.com/cli/latest/reference/ssm/put-parameter.html
+
+# 感想
+めんどくさかったです。もっといい方法あるで！という方はぜひ教えてください🙏

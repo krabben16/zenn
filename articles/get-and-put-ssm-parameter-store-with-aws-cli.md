@@ -37,6 +37,11 @@ aws ssm put-parameter \
     --type String
 ```
 
+:::message
+自分の環境ではvalueにハイフンを含んでいると以下のエラーが発生しました。エスケープすれば解決するかもしれませんが時間がかかりそうだったので、エラーが発生したパラメータはCLIではなくAWSコンソールで作成しました😅
+> aws: error: argument --value: expected one argument
+:::
+
 ## 参考
 
 https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/param-create-cli.html

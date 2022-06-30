@@ -307,6 +307,8 @@ https://github.com/reg-viz/storycap#command-line-options
 
 https://pptr.dev/#?product=Puppeteer&version=v13.4.0&show=api-puppeteerlaunchoptions
 
+# 結論
+
 現時点ではCI環境でStorycapの実行時にダークモードでスナップショットを作成できず、ローカル環境で発生する背景が黒くなる現象を再現できないという結論に至りました…。もしダークモードでスナップショットを作成する方法をご存じの方はぜひ教えていただきたいです。
 
 # 感想

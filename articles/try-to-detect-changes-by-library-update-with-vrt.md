@@ -246,18 +246,17 @@ VRTのジョブは以下を設定しました。
 ![](https://storage.googleapis.com/zenn-user-upload/7c342a2f3214-20220630.png)
 
 ## PRへの通知
-ジョブが完了すると比較結果がPRにコメントされます。Changed itemsは赤い丸として表示されます。
+ジョブが完了すると比較結果がPRにコメントされます。Changed itemsは赤い丸として表示されます。コメントの`this report`をクリックすると比較結果のレポートを閲覧できます。
+
 
 ![](https://storage.googleapis.com/zenn-user-upload/327823eb8a22-20220630.png)
 
-コメントの`this report`をクリックすると比較結果のレポートを閲覧できます。
-
 ## 比較結果のレポート
-CHANGED ITEMSに`Content With Code Block`が表示されています。
+CHANGED ITEMSに`Content With Code Block`が表示されています。ライブラリをアップデートして背景が黒くなったことが検知されているに違いありません。
 
 ![](https://storage.googleapis.com/zenn-user-upload/1e3a084369a2-20220630.png)
 
-ライブラリをアップデートして背景が黒くなったことが検知されているに違いありません。実際にどういうスナップショットが比較されたのか見てみましょう。CHANGED ITEMSのサムネイルをクリックします。
+実際にどういうスナップショットが比較されたのか見てみましょう。CHANGED ITEMSのサムネイルをクリックします。
 
 ![](https://storage.googleapis.com/zenn-user-upload/df898574f484-20220630.png)
 *左：基点ブランチのスナップショット 右：Renovateブランチのスナップショット*

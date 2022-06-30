@@ -1,12 +1,12 @@
 ---
-title: "AWS ECS-Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK(TypeScript)" # 記事のタイトル
+title: "ECS on Fargateで稼働するコンテナのメトリクスをDatadogに送信する with CDK(TypeScript)" # 記事のタイトル
 emoji: "🐶" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["aws", "ecs", "fargate", "datadog", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["ecs", "fargate", "datadog", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 ---
 
-# 概要
+# やること
 - Datadog AgentコンテナをECSのタスクに追加し、同じタスクで起動している他のコンテナのメトリクスを収集してDatadogに送信します。
 - 上記の構成をCDK(TypeScript)で実装します。
 
@@ -19,11 +19,11 @@ published: true # 公開設定（falseにすると下書き）
 - yarn@1.22.19
 - npm packages
   - aws-cdk@2.28.0
+  - typescript@4.7.4
   - aws-cdk-lib@2.28.0
 
 # 事前準備
-Secrets Managerで `EcsAlbFargateServiceDDApiKey` という名前のシークレットを作成する必要があります。
-シークレットの値にはDatadogのAPIキーを設定します。
+サンプルコードではSecrets Managerから取得したAPIキーをDatadog Agentが参照します。なのであらかじめSecrets Managerで値にDatadogのAPIキーを設定したシークレットを作成します。シークレットの名前は`EcsAlbFargateServiceDDApiKey`としました。
 
 # 実装
 サンプルコードはGitHubに配置しました。

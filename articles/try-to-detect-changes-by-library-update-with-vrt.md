@@ -52,7 +52,8 @@ https://zenn.dev/toshiokun/articles/3d7087b84ba1d9
 
 https://github.com/krabben16/yurikago-next
 
-# Storybookの追加
+# ライブラリのセットアップ
+## Storybookの追加
 参考記事の手順でほとんど対応できたので省略します。
 
 ```json:package.json
@@ -65,7 +66,7 @@ https://github.com/krabben16/yurikago-next
 
 https://zenn.dev/minguu42/articles/20211226-nextjs-storybook
 
-# Storycapの追加
+## Storycapの追加
 
 ```
 yarn add storycap
@@ -79,7 +80,7 @@ yarn add storycap
 
 https://github.com/reg-viz/storycap#install
 
-# reg-suitの追加
+## reg-suitの追加
 
 ```
 yarn add reg-suit

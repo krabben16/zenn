@@ -235,15 +235,13 @@ VRTのジョブは以下を設定しました。
 
 ![](https://storage.googleapis.com/zenn-user-upload/291da8fb2677-20220630.png)
 
-ログに以下の文言が出力されています。
+ログに以下の文言が出力されています。`Content With Code Block`の変化が検知されているのではないでしょうか！？
 
 ```log
 [reg-suit] debug fail: Blog/Content/Content With Code Block.png
 :
 [reg-suit] info    Changed items: 1
 ```
-
-`Content With Code Block`の変化が検知されているのではないでしょうか！？
 
 ![](https://storage.googleapis.com/zenn-user-upload/7c342a2f3214-20220630.png)
 

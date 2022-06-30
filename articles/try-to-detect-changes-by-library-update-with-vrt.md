@@ -152,7 +152,7 @@ CIでは作成したIAMユーザーのクレデンシャルを環境変数に設
 ## secretの読み込み
 クライアントIDとS3バケット名は環境変数を経由して読み込むようにしました。
 
-```yml
+```yml:cicd.yml
 env:
   REG_SUIT_CLIENT_ID: ${{ secrets.REG_SUIT_CLIENT_ID }}
   REG_SUIT_S3_BUCKET_NAME: ${{ secrets.REG_SUIT_S3_BUCKET_NAME }}
@@ -180,13 +180,13 @@ https://qiita.com/eretica/items/080cf75f8b9d2d928799
 ## 切り離されたHEADの回避策
 READMEのCIセクションに記述されている設定を追加します。
 
-```yml
+```yml:cicd.yml
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
 ```
 
-```yml
+```yml:cicd.yml
       - name: workaround for detached HEAD
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
@@ -201,7 +201,7 @@ https://github.com/reg-viz/reg-suit/issues/186
 ## 日本語フォントの追加
 Storycapで取得するスナップショットの日本語が文字化けするので日本語フォントを追加します。
 
-```yml
+```yml:cicd.yml
 - name: Install Japanese fonts
   run: |
     sudo apt install fonts-ipafont fonts-ipaexfont
@@ -212,14 +212,14 @@ https://www.pnkts.net/2021/10/14/chromium-chromedriver-japanese
 # VRTの実行
 CIの発火条件は以下を設定しました。何かしらコミットをプッシュすればCIが発火します。
 
-```yml
+```yml:cicd.yml
 on:
   push:
 ```
 
 VRTのジョブは以下を設定しました。
 
-```yml
+```yml:cicd.yml
 - name: Visual Regression Test
   run: |
     yarn storycap

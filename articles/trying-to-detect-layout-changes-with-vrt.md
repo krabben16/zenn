@@ -3,7 +3,7 @@ title: "ライブラリアップデート時のレイアウトの変化をVisual
 emoji: "🖼" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["nextjs", "githubactions", "storybook", "regsuit", "puppeteer"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
 # はじめに
@@ -15,7 +15,7 @@ published: false # 公開設定（falseにすると下書き）
 *before*
 
 ![](https://storage.googleapis.com/zenn-user-upload/ca865528692d-20220630.png)
-*after(なぜか一部背景が黒くなる)*
+*after(なぜか背景が黒くなる)*
 
 ユニットテストやNext.jsのビルドでエラーにならないので目視で確認しないと気付きませんでした。こういった影響をライブラリをアップデートするたびに手動で確認するのは手間だなと思ったので、ある程度自動化できないかと思い方法を調べました。今回は以下の記事を参考にVisual Regression Testを使って視覚的な変化を検知する方法を試しました。
 
@@ -105,6 +105,7 @@ yarn reg-suit init
       "prComment": true,
       "prCommentBehavior": "default",
       "clientId": "<クライアントID>",
+      "setCommitStatus": false
     },
     "reg-publish-s3-plugin": {
       "bucketName": "<S3バケット名>"
@@ -112,6 +113,8 @@ yarn reg-suit init
   }
 }
 ```
+
+reg-suitの実行結果をPRのステータスに反映させないよう`setCommitStatus`を無効にしました。これがtrueだと、意図した変更なのにステータスが赤いPRをマージすることになり正常な感覚を失う恐れがあるためです。（N予備校のエンジニアの方の受け売り）
 
 ```json:package.json
     "regression": "reg-suit run"

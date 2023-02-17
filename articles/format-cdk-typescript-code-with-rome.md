@@ -35,14 +35,19 @@ https://rome.tools/
 }
 ```
 
-参考 https://docs.rome.tools/configuration/
+:::message
+linterのrecommendedで設定されるルールは以下のページで確認できます。 https://docs.rome.tools/lint/rules/
+:::
+
+
+https://docs.rome.tools/configuration/
 
 ## エディタの拡張機能にRomeを追加
 2023/02/17現在 拡張機能はVSCodeのみ対応しています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/294798af3cd6-20230217.png)
 
-参考 https://docs.rome.tools/guides/getting-started/#editor-setup
+https://docs.rome.tools/guides/getting-started/#editor-setup
 
 ## VSCodeの設定を変更
 1. `cmd+,`で設定を開く
@@ -58,4 +63,5 @@ https://rome.tools/
 ## 感想
 - Romeのエディタ拡張機能はVSCodeのみ対応しているので、他のエディタを使っている方は設定できません。ESlintやPrettierのエディタ拡張機能を使う、Romeのnpmパッケージをインストールしてpre-commitでフォーマットを実行する、など検討した方がいいかもしれません。
 - Romeの主要なコントリビュータが開発から離脱したそうで将来性が少し不安です😓
-    - 参考 https://zenn.dev/kyrice2525/articles/article_tech_009
+
+https://zenn.dev/kyrice2525/articles/article_tech_009

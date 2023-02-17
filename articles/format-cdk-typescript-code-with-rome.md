@@ -3,7 +3,7 @@ title: "TypeScriptで書いたCDKのコードをRomeでフォーマットする"
 emoji: "🚪" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["rome", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 
 # 前提
@@ -55,7 +55,7 @@ https://rome.tools/
 
 コードを修正して保存するタイミングで整形が実行されます。
 
-## 課題
-- エディタの拡張機能はVSCodeのみ対応しているので、他のエディタを使っている人は設定できません。ESlintやPrettierの拡張機能を使う、Romeのnpmパッケージをインストールしてpre-commitで整形を実行する、など検討した方がいいかもしれません。
-- Romeの主要なコントリビュータが開発から離脱したそうで将来性が少し不安です。
+## 感想
+- Romeのエディタ拡張機能はVSCodeのみ対応しているので、他のエディタを使っている方は設定できません。ESlintやPrettierのエディタ拡張機能を使う、Romeのnpmパッケージをインストールしてpre-commitでフォーマットを実行する、など検討した方がいいかもしれません。
+- Romeの主要なコントリビュータが開発から離脱したそうで将来性が少し不安です😓
     - 参考 https://zenn.dev/kyrice2525/articles/article_tech_009

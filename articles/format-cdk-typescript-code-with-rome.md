@@ -6,11 +6,15 @@ topics: ["rome", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]の�
 published: true # 公開設定（falseにすると下書き）
 ---
 
-# 前提
+# 前置き
 TypeScriptで書いたCDKコードのフォーマッターを選定中です。
 ESLintとPrettierはセットアップが面倒に感じるのでRomeを使ってみます。
 
 https://rome.tools/
+
+# 環境
+- VSCode 1.75.1
+- Rome 0.20.0
 
 # セットアップ
 ## Romeの設定ファイルを作成

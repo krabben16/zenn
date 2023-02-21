@@ -1,5 +1,5 @@
 ---
-title: "TypeScriptで書いたCDKのコードをRomeでフォーマットする" # 記事のタイトル
+title: "TypeScriptで書いたCDKのコードをRomeでフォーマットする（エディタ拡張機能編）" # 記事のタイトル
 emoji: "🚪" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["rome", "cdk", "typescript"] # タグ。["markdown", "rust", "aws"]のように指定する

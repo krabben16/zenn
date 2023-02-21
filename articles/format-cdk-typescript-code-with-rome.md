@@ -65,7 +65,7 @@ https://docs.rome.tools/guides/getting-started/#editor-setup
 コードを修正して保存するタイミングで整形が実行されます。
 
 ## 感想
-- Romeのエディタ拡張機能はVSCodeのみ対応しているので、他のエディタを使っている方は設定できません。ESlintやPrettierのエディタ拡張機能を使う、Romeのnpmパッケージをインストールしてpre-commitでフォーマットを実行する、など検討した方がいいかもしれません。
+- Romeのエディタ拡張機能はVSCodeのみ対応しているので、他のエディタを使っている方は設定できません。ESLintやPrettierなど別のフォーマッターのエディタ拡張機能を使う、Romeのnpmパッケージをインストールしてhuskyやlint-stagedと組み合わせてフォーマットを実行する、などの方法を検討した方がいいかもしれません。
 - Romeの主要なコントリビュータが開発から離脱したそうで将来性が少し不安です😓
 
 https://zenn.dev/kyrice2525/articles/article_tech_009
